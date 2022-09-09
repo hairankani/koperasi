@@ -49,7 +49,9 @@ require_once("../koneksi/require.php");
 
                     <!-- //add intern -->
                     <p><a href="" data-bs-toggle="modal" data-bs-target="#modalTambah" type="button"
-                            class="btn text-light" style="background-color: #78938A;">Create</a>
+                            class="btn text-light" style="background-color: #78938A;">
+                            <i class="fas fa-plus"></i>
+                            Add Criteria</a>
                     </p>
                     <div class="modal fade" id="modalTambah" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -101,11 +103,15 @@ require_once("../koneksi/require.php");
                             <tr class="text-dark">
                                 <td class="text-center text-dark"><?= $no ?></td>
                                 <td class="text-dark"><?= $r['kriteria']; ?></td>
-                                <td class="text-dark"><a href="#" type="button" class="btn btn-danger"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modalHapus<?php echo $r['id']; ?>">Delete</a>
-                                    <a href="#" type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                        data-bs-target="#modalEdit<?php echo $r['id']; ?>">Edit </a>
+                                <td class="text-dark"><a href="#" type="button" class="btn text-light"
+                                        style="background-color: #8B0000;" data-bs-toggle="modal"
+                                        data-bs-target="#modalHapus<?php echo $r['id']; ?>">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                    <a href="#" type="button" class="btn text-light" style="background-color: #b4c6dc;"
+                                        data-bs-toggle="modal" data-bs-target="#modalEdit<?php echo $r['id']; ?>">
+                                        <i class="fas fa-pen"></i>
+                                    </a>
                                 </td>
                                 <!-- delete -->
                                 <div class="modal fade" id="modalHapus<?php echo $r['id']; ?>">

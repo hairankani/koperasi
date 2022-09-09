@@ -1,4 +1,4 @@
-<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #94B49F;" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #a4b8ac;" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -37,11 +37,11 @@
             <span>Intern Value</span></a>
     </li>
     <hr class="sidebar-divider my-0">
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="reportnilai.php">
             <i class="fas fa-file-alt"></i>
             <span>Intern Score Report</span></a>
-    </li>
+    </li> -->
 
 
 

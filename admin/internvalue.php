@@ -33,6 +33,10 @@ require_once("../koneksi/require.php");
     input[type=number] {
         -moz-appearance: textfield;
     }
+
+    .buttons-excel {
+        background: red
+    }
     </style>
 
 
@@ -65,7 +69,9 @@ require_once("../koneksi/require.php");
 
                     <!-- //add intern -->
                     <p><a href="" data-bs-toggle="modal" data-bs-target="#modalTambah" type="button"
-                            class="btn text-light" style="background-color: #78938A;">Create</a>
+                            class="btn text-light" style="background-color: #78938A;">
+                            <i class="fas fa-plus"></i>
+                            Add Intern Value</a>
                     </p>
                     <div class="modal fade" id="modalTambah" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -167,14 +173,19 @@ require_once("../koneksi/require.php");
                                 <td class="text-dark"><?= $r['nilaiE']; ?></td>
                                 <td class="text-dark"><?= $r['rata_rata']; ?></td>
                                 <td class="text-dark"><?= $r['predikat']; ?></td>
-                                <td class="text-center text-dark">
+                                <td class="">
                                     <!-- <form action="detailvalue.php" method="POST"> -->
                                     <!-- <input type='hidden' name='id' value="<?php echo $r['iddetail']; ?>"> -->
                                     <a href="detailvalue.php?id=<?= $r['iddetail']; ?>" type="submit" name="view"
-                                        class="btn btn-info">View</a>
+                                        class="btn text-light" style="background-color: #E9967A;"
+                                        style="color: #000000;">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
                                     <!-- </form> -->
-                                    <a href="#" type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#modalHapus<?php echo $r['id']; ?>">Delete</a>
+                                    <a href="#" type="button" class="btn text-light" style="background-color: #8B0000;"
+                                        data-bs-toggle="modal" data-bs-target="#modalHapus<?php echo $r['id']; ?>">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
                                 </td>
                                 <!-- delete -->
                                 <div class="modal fade" id="modalHapus<?php echo $r['id']; ?>">
@@ -279,21 +290,25 @@ require_once("../koneksi/require.php");
                     extend: 'print',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                    }
+                    },
+                    text: '<i class="fas fa-print"></i> Print'
                 },
                 {
                     extend: 'excelHtml5',
                     exportOptions: {
                         columns: ':visible'
-                    }
+                    },
+                    text: '<i class="fas fa-download"></i> Excel'
                 },
                 {
                     extend: 'pdfHtml5',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-                    }
+                    },
+                    text: '<i class="fas fa-download"></i> PDF'
                 },
             ]
+
             // buttons: ['copy', 'print', 'pdf', 'colvis'],
 
         });

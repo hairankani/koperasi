@@ -36,15 +36,15 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4 hai">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4 hai">Sign Up Now!</h1>
                                     </div>
                                     <a href="admin/login-admin.php" class="btn btn btn-user btn-block"
                                         style="background-color: #CEE5D0;" style="color:azure">
-                                        Login Sebagai Admin
+                                        Login As Admin
                                     </a>
                                     <a href="magang/login-magang.php" class="btn btn btn-user btn-block"
                                         style="background-color: #CEE5D0;" style="color:aliceblue ">
-                                        Login Sebagai Karyawan Magang
+                                        Login As Intern
                                     </a>
                                     <hr>
 

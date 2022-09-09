@@ -36,31 +36,35 @@ if(isset($_SESSION['username'])){
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block"></div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img src="../img/gambarloginintern.gif" width="110%">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Intern!🙋🏻‍♀️
                                         </h1>
+                                        <img src="../img/loginadmin3.png">
                                     </div>
                                     <form class="user" method="POST" action="../admin/proseslogin.php">
                                         <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"
-                                                placeholder="Enter username...">
+                                                placeholder="Input Username">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password"
                                                 class="form-control form-control-user" id="exampleInputPassword"
-                                                placeholder="Password">
+                                                placeholder=" Input Password">
+                                            <i class="fas fa-key"></i>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember
                                                     Me</label>
                                             </div>
-                                        </div>
-                                        <button type="submit" class="btn btn btn-user btn-block"
+                                        </div> -->
+                                        <button type="submit" class="btn text-light btn-user btn-block"
                                             style="background-color: #A2B5BB;">
                                             Login
                                         </button>
