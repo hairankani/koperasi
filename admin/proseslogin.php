@@ -18,6 +18,7 @@
         if ($level['level'] == 'admin'){
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "admin";
+            $_SESSION['id'] = $level['id'];
             header("location: index-admin.php");
         } else if ($level['level'] == 'magang'){
             $_SESSION['username'] = $username;

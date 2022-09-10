@@ -3,11 +3,15 @@ session_start();
 require_once("../koneksi/db.php");
 //Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['username'])){
-    header("location: ../admin/login-admin.php");
+    header("location: login-admin.php");
 }else{
     // Jika sudah dibuatkan sesi maka akan kita masukkan kedalam variabel
     $username = $_SESSION['username'];
+    $id = $_SESSION['id'];
 }
+// var_dump($_SESSION); die();
+
+$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -214,6 +218,7 @@ if(isset($_POST['insertcompany']))
     $email = $_POST['email'];
     $website = $_POST['website'];
     $sosmed = $_POST['sosmed'];
+    $userId = $_SESSION['id'];
     $namaFile = $_FILES['image']['name'];
     // $namaSementara = $_FILES['image']['tmp_name'];
     // $folder = "img/" . $namaFile;
@@ -225,7 +230,7 @@ if(isset($_POST['insertcompany']))
         }
     }
 
-    $query = "INSERT INTO company (`nama_perusahaan`, `jenis_perusahaan`,`tentang`,`alamat`,`nohp`,`email`,`website`,`sosmed`, `image`) VALUES ('$nama_perusahaan', '$jenis_perusahaan', '$tentang','$alamat', '$nohp', '$email', '$website', '$sosmed' ,'$namaFile')";
+    $query = "INSERT INTO company (`nama_perusahaan`, `jenis_perusahaan`,`tentang`,`alamat`,`nohp`,`email`,`website`,`sosmed`, `image`, `userId`) VALUES ('$nama_perusahaan', '$jenis_perusahaan', '$tentang','$alamat', '$nohp', '$email', '$website', '$sosmed' ,'$namaFile', '$userId')";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)
