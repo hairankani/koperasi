@@ -246,7 +246,9 @@ if(isset($_POST['updatecompany']))
 
     if($query_run)
     {
-        echo "<script type='text/javascript'>window.location.href='/spkj/admin/company.php';</script>";
+       echo "<script>
+       document.location='company.php'
+       </script>";
     }
     else
     {
