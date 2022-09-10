@@ -86,7 +86,7 @@ require_once("../koneksi/require.php");
 
                     <!-- //table intern -->
                     <div class="row">
-                        <table id="tableKriteria" class="table table-light table-hover">
+                        <table id="tableKriteria" class="table table-hover" style="background: #fff">
                             <thead>
                                 <tr>
                                     <th scope="col">No. </th>

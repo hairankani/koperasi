@@ -58,14 +58,20 @@ if(!isset($_SESSION['username'])){
                     <div class="row">
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2" style="background-color: #CEE5D0;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
                                                 Data Kriteria</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">#</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php
+                                                    $kriteria = mysqli_query($conn,"SELECT * FROM kriteria");
+                                                    $jumlahKriteria = mysqli_num_rows($kriteria);
+                                                ?>
+                                                <?php echo "$jumlahKriteria" ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <!-- <i class="fas fa-calendar fa-2x text-gray-300"></i> -->
@@ -76,14 +82,20 @@ if(!isset($_SESSION['username'])){
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">
                                                 Data Intern</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">#</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                                <?php
+                                                    $magang = mysqli_query($conn,"SELECT * FROM magang");
+                                                    $jumlahMagang = mysqli_num_rows($magang);
+                                                ?>
+                                                <?php echo "$jumlahMagang" ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <!-- <i class="fas fa-dollar-sign fa-2x text-gray-300"></i> -->
@@ -94,7 +106,7 @@ if(!isset($_SESSION['username'])){
                         </div>
 
                         <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="col-xl-4 col-md-6 mb-4">
                             <div class="card shadow h-100 py-2" style="background-color: #ECB390;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <div class="row no-gutters align-items-center">
@@ -103,7 +115,13 @@ if(!isset($_SESSION['username'])){
                                                 Report Nilai</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">#</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                        <?php
+                                                    $nilai = mysqli_query($conn,"SELECT * FROM nilai");
+                                                    $jumlahNilai = mysqli_num_rows($nilai);
+                                                ?>
+                                                        <?php echo "$jumlahNilai" ?>
+                                                    </div>
                                                 </div>
                                                 <div class="col">
                                                     <!-- <div class="progress progress-sm mr-2">
@@ -116,6 +134,23 @@ if(!isset($_SESSION['username'])){
                                         </div>
                                         <div class="col-auto">
                                             <!-- <i class="fas fa-clipboard-list fa-2x text-gray-300"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
+                                <div class="card-body" style="border-radius: 20px;">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-lg-4">
+                                            <img src="../img/koalaremove.png" alt="">
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <h5>Hi, <?= $username; ?></h5>
+                                            <h5>If the intern has finished carrying out of the
+                                                internship in accordance with specified time span,
+                                                please rate it in the Intern Value!</h5>
                                         </div>
                                     </div>
                                 </div>

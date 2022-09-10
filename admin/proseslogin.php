@@ -8,7 +8,7 @@
  
     // menyeleksi data pada tabel admin dengan username dan password yang sesuai
     $data = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
- 
+
     // menghitung jumlah data yang ditemukan
     $cek = mysqli_num_rows($data);
  
@@ -22,6 +22,7 @@
         } else if ($level['level'] == 'magang'){
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "magang";
+            $_SESSION['id'] = $level['id'];
             header("location: ../magang/index-magang.php");
         }
 

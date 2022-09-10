@@ -14,36 +14,22 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="index-admin.php">
+        <a class="nav-link" href="index-magang.php">
             <i class="fas fa-home" style="color: #fff"></i>
             <span style="color: #fff">Dashboard</span></a>
     </li>
     <hr class="sidebar-divider my-0">
     <li class="nav-item">
-        <a class="nav-link" href="criteriavalue.php">
-            <i class="fas fa-list-ul" style="color: #fff"></i>
-            <span style="color: #fff">Criteria Value</span></a>
+        <a class="nav-link" href="viewgrade.php">
+            <i class="fas fa-eye" style="color: #fff"></i>
+            <span style="color: #fff">View Grades</span></a>
     </li>
     <hr class="sidebar-divider my-0">
     <li class="nav-item">
-        <a class="nav-link" href="interndata.php">
+        <a class="nav-link" href="showCompany.php">
             <i class="fas fa-user-friends" style="color: #fff"></i>
-            <span style="color: #fff">Intern Data</span></a>
+            <span style="color: #fff">Company Profile</span></a>
     </li>
-    <hr class="sidebar-divider my-0">
-    <li class="nav-item">
-        <a class="nav-link" href="internvalue.php">
-            <i class="fas fa-window-restore" style="color: #fff"></i>
-            <span style="color: #fff">Intern Value</span></a>
-    </li>
-    <hr class="sidebar-divider my-0">
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="reportnilai.php">
-            <i class="fas fa-file-alt"></i>
-            <span>Intern Score Report</span></a>
-    </li> -->
-
-
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

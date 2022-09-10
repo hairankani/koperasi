@@ -2,7 +2,7 @@
 // session_start();
 require_once("../koneksi/db.php");
 if(!isset($_SESSION['username'])){
-    header("location: login-admin.php");
+    header("location: login-intern.php");
 }else{
     $username = $_SESSION['username'];
 }
@@ -68,7 +68,7 @@ if(!isset($_SESSION['username'])){
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="company.php">
+                <a class="dropdown-item" href="profile.php">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>

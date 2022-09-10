@@ -1,27 +1,14 @@
 <?php
 require_once("../koneksi/require.php");
-// $id = $_GET['id'];
-
 $id = $_GET['id'];
-// var_dump($id); die();
+
     
     $detail = mysqli_query($conn, "SELECT nilai.id, nilai.rata_rata, nilai.predikat, magang.nama_magang, magang.instansi, detailnilai.* from magang inner join nilai on magang.id = nilai.idMagang inner join detailnilai on nilai.id = detailnilai.idNilai where detailnilai.id = $id");
     $result = mysqli_fetch_assoc($detail);
-    
-    // var_dump($detail); 
-    // var_dump($result); die();
-
-// }
-
-// var_dump($id); die();
-
-
-// var_dump($detail); die();
 
 
 $kriteria = mysqli_query($conn, "SELECT kriteria FROM kriteria");
 $resultKriteria = mysqli_fetch_all($kriteria);
-// var_dump($resultKriteria);die();
 $no=1;
 
 ?>
@@ -80,7 +67,7 @@ $no=1;
 
 
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card mb-3" style="width: 18rem;">
 
                         <div class="card-body">
                             <h4>Detail Data Magang</h4>
@@ -100,7 +87,7 @@ $no=1;
                     </div>
                     <!-- //table intern -->
                     <div class="row">
-                        <table id="tableValue" class="table table-light table-hover ">
+                        <table id="tableValue" class="table table-hover" style="background: #fff">
                             <thead>
                                 <tr>
                                     <th scope="col">No. </th>
