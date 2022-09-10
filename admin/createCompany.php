@@ -9,11 +9,9 @@ if(!isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     $id = $_SESSION['id'];
 }
+// var_dump($_SESSION); die();
 
-$getId = $_SESSION['id'];
-$detail = mysqli_query($conn, "SELECT company.* from company inner join users on company.userId = users.id where company.userId = $getId");
-$result = mysqli_fetch_assoc($detail);   
-// var_dump($result['image']); die();
+$id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,6 +66,9 @@ $result = mysqli_fetch_assoc($detail);
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Edit Profile</h1>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm shadow-sm"
+                            style="background-color: #ECB390;"><i class="fas fa-download fa-sm text-white-50"></i>
+                            Generate Report</a> -->
                     </div>
 
                     <!-- Content Row -->
@@ -76,14 +77,12 @@ $result = mysqli_fetch_assoc($detail);
                             <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <form action="" method="POST" role="form text-left" enctype="multipart/form-data">
-                                        <input type="hidden" name="id" class="form-control"
-                                            value="<?= $result['id'] ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="nama" class="col-form-label" style="color: #16161a">Nama
                                                     Perusahaan</label>
                                                 <input type="text" name="nama_perusahaan" class="form-control"
-                                                    value="<?= $result['nama_perusahaan'] ?>">
+                                                    placeholder="Add Nama Perusahaan">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -91,7 +90,7 @@ $result = mysqli_fetch_assoc($detail);
                                                 <label for="jenis" class="col-form-label" style="color: #16161a">Jenis
                                                     Perusahaan</label>
                                                 <input type="text" name="jenis_perusahaan" class="form-control"
-                                                    value="<?= $result['jenis_perusahaan'] ?>">
+                                                    placeholder="Add Jenis Perusahaan">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -100,7 +99,7 @@ $result = mysqli_fetch_assoc($detail);
                                                     style="color: #16161a">Tentang
                                                     Perusahaan</label>
                                                 <textarea class="form-control" name="tentang"
-                                                    rows="3"><?= $result['tentang'] ?></textarea>
+                                                    placeholder="Add Tentang Perusahaan" rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -108,8 +107,7 @@ $result = mysqli_fetch_assoc($detail);
                                                 <label for="alamat" class="col-form-label" style="color: #16161a">Alamat
                                                     Perusahaan</label>
                                                 <textarea class="form-control" name="alamat"
-                                                    placeholder="Add Alamat Perusahaan"
-                                                    rows="3"><?= $result['alamat'] ?></textarea>
+                                                    placeholder="Add Alamat Perusahaan" rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -117,7 +115,7 @@ $result = mysqli_fetch_assoc($detail);
                                                 <label for="nohp" class="col-form-label" style="color: #16161a">Nomor HP
                                                     Perusahaan</label>
                                                 <input type="number" name="nohp" class="form-control"
-                                                    value="<?= $result['nohp'] ?>">
+                                                    placeholder="Add NO HP Perusahaan">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -125,7 +123,7 @@ $result = mysqli_fetch_assoc($detail);
                                                 <label for="email" class="col-form-label" style="color: #16161a">Email
                                                     Perusahaan</label>
                                                 <input type="email" name="email" class="form-control"
-                                                    value="<?= $result['email'] ?>">
+                                                    placeholder="Add Email Perusahaan">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -134,7 +132,7 @@ $result = mysqli_fetch_assoc($detail);
                                                     style="color: #16161a">Website
                                                     Perusahaan</label>
                                                 <input type="text" name="website" class="form-control"
-                                                    value="<?= $result['website'] ?>">
+                                                    placeholder="Add Website Perusahaan">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -143,16 +141,14 @@ $result = mysqli_fetch_assoc($detail);
                                                     style="color: #16161a">Social Media
                                                     Perusahaan</label>
                                                 <input type="text" name="sosmed" class="form-control"
-                                                    value="<?= $result['sosmed'] ?>">
+                                                    placeholder="Add Social Media Perusahaan">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="image" class="col-form-label" style="color: #16161a">Logo
                                                     Perusahaan</label>
-                                                <input class="form-control" type="file" name="image" id="image"
-                                                    value="<?= $result['image'] != null ? $result['image'] : $result['image'] ?>">
-                                                <input type="hidden" name="oldimage" value="<?= $result['image'] ?>">
+                                                <input class="form-control" type="file" name="image" id="image">
                                             </div>
                                         </div>
 
@@ -160,7 +156,7 @@ $result = mysqli_fetch_assoc($detail);
                                 <div class="d-flex justify-content-end">
                                     <a href="index-admin.php" class="btn btn-md btn-secondary text-light mt-4 mb-4"
                                         style="font-weight: bold;margin-right: 2%">Back</a>
-                                    <button type="submit" name="updatecompany" class="btn btn-md mt-4 mb-4"
+                                    <button type="submit" name="insertcompany" class="btn btn-md mt-4 mb-4"
                                         style="background: #c9bbcf;color: #16161a ;margin-right: 2%">Submit</button>
                                 </div>
                                 </form>
@@ -211,10 +207,9 @@ $result = mysqli_fetch_assoc($detail);
 
 </html>
 <?php 
-if(isset($_POST['updatecompany']))
-{   
-    
-    $id = $_POST['id'];
+if(isset($_POST['insertcompany']))
+{
+  
     $nama_perusahaan = $_POST['nama_perusahaan'];
     $jenis_perusahaan = $_POST['jenis_perusahaan'];
     $tentang = $_POST['tentang'];
@@ -228,20 +223,14 @@ if(isset($_POST['updatecompany']))
     // $namaSementara = $_FILES['image']['tmp_name'];
     // $folder = "img/" . $namaFile;
     // $terupload = move_uploaded_file($namaSementara, $folder);
-
-    if ($namaFile == null) {
-        $namaFile = $_POST['oldimage'];
-    } else {
-        if (strlen($namaFile)>0) {
-            //upload Photo
-            if (is_uploaded_file($_FILES['image']['tmp_name'])) {
-                move_uploaded_file ($_FILES['image']['tmp_name'], "../img/".$namaFile);
-            }
-        } 
+    if (strlen($namaFile)>0) {
+        //upload Photo
+        if (is_uploaded_file($_FILES['image']['tmp_name'])) {
+            move_uploaded_file ($_FILES['image']['tmp_name'], "../img/".$namaFile);
+        }
     }
-    
 
-    $query = "UPDATE company SET nama_perusahaan='$nama_perusahaan', jenis_perusahaan='$jenis_perusahaan', tentang='$tentang', alamat='$alamat', nohp='$nohp', email='$email', website='$website', sosmed='$sosmed', userId='$userId', image='$namaFile' where company.id = '$id'";
+    $query = "INSERT INTO company (`nama_perusahaan`, `jenis_perusahaan`,`tentang`,`alamat`,`nohp`,`email`,`website`,`sosmed`, `image`, `userId`) VALUES ('$nama_perusahaan', '$jenis_perusahaan', '$tentang','$alamat', '$nohp', '$email', '$website', '$sosmed' ,'$namaFile', '$userId')";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)

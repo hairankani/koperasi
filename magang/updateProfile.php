@@ -11,9 +11,8 @@ if(!isset($_SESSION['username'])){
 }
 
 $getId = $_SESSION['id'];
-$detail = mysqli_query($conn, "SELECT company.* from company inner join users on company.userId = users.id where company.userId = $getId");
-$result = mysqli_fetch_assoc($detail);   
-// var_dump($result['image']); die();
+$magang = mysqli_query($conn, "SELECT magang.*, users.username  from magang inner join users on magang.userId = users.id where magang.userId = $getId");
+$get = mysqli_fetch_assoc($magang);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,91 +75,93 @@ $result = mysqli_fetch_assoc($detail);
                             <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <form action="" method="POST" role="form text-left" enctype="multipart/form-data">
-                                        <input type="hidden" name="id" class="form-control"
-                                            value="<?= $result['id'] ?>">
+                                        <input type="hidden" name="id" class="form-control" value="<?= $get['id'] ?>">
+                                        <input type="hidden" name="startIntern" class="form-control"
+                                            value="<?= $get['startIntern'] ?>">
+                                        <input type="hidden" name="endIntern" class="form-control"
+                                            value="<?= $get['endIntern'] ?>">
+                                        <input type="hidden" name="password" class="form-control"
+                                            value="<?= $get['password'] ?>">
+                                        <input type="hidden" name="userId" class="form-control"
+                                            value="<?= $get['userId'] ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="nama" class="col-form-label" style="color: #16161a">Nama
-                                                    Perusahaan</label>
-                                                <input type="text" name="nama_perusahaan" class="form-control"
-                                                    value="<?= $result['nama_perusahaan'] ?>">
+                                                <label for="username" class="col-form-label"
+                                                    style="color: #16161a">Username
+                                                </label>
+                                                <input type="text" name="username" class="form-control"
+                                                    value="<?= $get['username'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="jenis" class="col-form-label" style="color: #16161a">Jenis
-                                                    Perusahaan</label>
-                                                <input type="text" name="jenis_perusahaan" class="form-control"
-                                                    value="<?= $result['jenis_perusahaan'] ?>">
+                                                <label for="nama" class="col-form-label"
+                                                    style="color: #16161a">Nama</label>
+                                                <input type="text" name="nama_magang" class="form-control"
+                                                    value="<?= $get['nama_magang'] ?>">
                                             </div>
                                         </div>
+
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="tentang" class="col-form-label"
-                                                    style="color: #16161a">Tentang
-                                                    Perusahaan</label>
-                                                <textarea class="form-control" name="tentang"
-                                                    rows="3"><?= $result['tentang'] ?></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="alamat" class="col-form-label" style="color: #16161a">Alamat
-                                                    Perusahaan</label>
-                                                <textarea class="form-control" name="alamat"
-                                                    placeholder="Add Alamat Perusahaan"
-                                                    rows="3"><?= $result['alamat'] ?></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="nohp" class="col-form-label" style="color: #16161a">Nomor HP
-                                                    Perusahaan</label>
-                                                <input type="number" name="nohp" class="form-control"
-                                                    value="<?= $result['nohp'] ?>">
+                                                <label for="instansi" class="col-form-label" style="color: #16161a">Asal
+                                                    Instansi
+                                                </label>
+                                                <input type="text" name="instansi" class="form-control"
+                                                    value="<?= $get['instansi'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="email" class="col-form-label" style="color: #16161a">Email
-                                                    Perusahaan</label>
+                                                </label>
                                                 <input type="email" name="email" class="form-control"
-                                                    value="<?= $result['email'] ?>">
+                                                    value="<?= $get['email'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="website" class="col-form-label"
-                                                    style="color: #16161a">Website
-                                                    Perusahaan</label>
-                                                <input type="text" name="website" class="form-control"
-                                                    value="<?= $result['website'] ?>">
+                                                <label for="alamat" class="col-form-label" style="color: #16161a">Alamat
+                                                </label>
+                                                <textarea class="form-control" name="alamat"
+                                                    rows="3"><?= $get['alamat'] ?></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="website" class="col-form-label"
-                                                    style="color: #16161a">Social Media
-                                                    Perusahaan</label>
-                                                <input type="text" name="sosmed" class="form-control"
-                                                    value="<?= $result['sosmed'] ?>">
+                                                <label for="nohp" class="col-form-label" style="color: #16161a">Nomor HP
+                                                </label>
+                                                <input type="number" name="nohp" class="form-control"
+                                                    value="<?= $get['nohp'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="image" class="col-form-label" style="color: #16161a">Logo
-                                                    Perusahaan</label>
-                                                <input class="form-control" type="file" name="image" id="image"
-                                                    value="<?= $result['image'] != null ? $result['image'] : $result['image'] ?>">
-                                                <input type="hidden" name="oldimage" value="<?= $result['image'] ?>">
+                                                <label>Gender : </label>
+                                                <label><input type="radio" name="jeniskelamin" value="Laki-Laki"
+                                                        <?php if($get['jeniskelamin']=='Laki-Laki'){?> checked="checked" <?php
+                                                        }?>>
+                                                    Laki-Laki</label>
+                                                <label><input type="radio" name="jeniskelamin" value="Perempuan"
+                                                        <?php if($get['jeniskelamin']=='Perempuan'){?>checked="checked" <?php
+                                                        }?>>
+                                                    Perempuan</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="image" class="col-form-label" style="color: #16161a">Foto
+                                                </label>
+                                                <input class="form-control" type="file" name="image" id="image">
+                                                <input type="hidden" name="oldimage" value="<?= $get['image'] ?>">
                                             </div>
                                         </div>
 
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-admin.php" class="btn btn-md btn-secondary text-light mt-4 mb-4"
+                                    <a href="index-magang.php" class="btn btn-md btn-secondary text-light mt-4 mb-4"
                                         style="font-weight: bold;margin-right: 2%">Back</a>
-                                    <button type="submit" name="updatecompany" class="btn btn-md mt-4 mb-4"
+                                    <button type="submit" name="updateprofile" class="btn btn-md mt-4 mb-4"
                                         style="background: #c9bbcf;color: #16161a ;margin-right: 2%">Submit</button>
                                 </div>
                                 </form>
@@ -206,24 +207,26 @@ $result = mysqli_fetch_assoc($detail);
         </div>
     </div>
 
-    <?php include('script-admin.php') ?>
+    <?php include('script-intern.php') ?>
 </body>
 
 </html>
 <?php 
-if(isset($_POST['updatecompany']))
+if(isset($_POST['updateprofile']))
 {   
     
     $id = $_POST['id'];
-    $nama_perusahaan = $_POST['nama_perusahaan'];
-    $jenis_perusahaan = $_POST['jenis_perusahaan'];
-    $tentang = $_POST['tentang'];
+    $nama_magang = $_POST['nama_magang'];
+    $instansi = $_POST['instansi'];
+    $email = $_POST['email'];
     $alamat = $_POST['alamat'];
     $nohp = $_POST['nohp'];
-    $email = $_POST['email'];
-    $website = $_POST['website'];
-    $sosmed = $_POST['sosmed'];
-    $userId = $_SESSION['id'];
+    $jeniskelamin = $_POST['jeniskelamin'];
+    $startIntern = $_POST['startIntern'];
+    $endIntern = $_POST['endIntern'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $userId = $_POST['userId'];
     $namaFile = $_FILES['image']['name'];
     // $namaSementara = $_FILES['image']['tmp_name'];
     // $folder = "img/" . $namaFile;
@@ -241,12 +244,16 @@ if(isset($_POST['updatecompany']))
     }
     
 
-    $query = "UPDATE company SET nama_perusahaan='$nama_perusahaan', jenis_perusahaan='$jenis_perusahaan', tentang='$tentang', alamat='$alamat', nohp='$nohp', email='$email', website='$website', sosmed='$sosmed', userId='$userId', image='$namaFile' where company.id = '$id'";
+    $query = "UPDATE magang SET nama_magang='$nama_magang', instansi='$instansi', email='$email', alamat='$alamat', nohp='$nohp', jeniskelamin='$jeniskelamin', startIntern='$startIntern', endIntern='$endIntern', username='$username', password='$password', userId='$userId', image='$namaFile' where magang.id = '$id'";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)
     {
-        echo "<script type='text/javascript'>window.location.href='/spkj/admin/company.php';</script>";
+        $setUser = "UPDATE users set username='$username' where users.id = '$userId'";
+        mysqli_query($conn, $setUser);
+        echo "<script>
+        document.location='profile.php'
+        </script>";
     }
     else
     {

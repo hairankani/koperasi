@@ -78,7 +78,7 @@ $get = mysqli_fetch_assoc($company);
                                         <div class="col-lg-12 mt-3">
                                             <h5 class="text-center">Your Company null</h5>
                                             <div style="text-align: center">
-                                                <a href="updateCompany.php" type="button" class="btn text-light"
+                                                <a href="createCompany.php" type="button" class="btn text-light"
                                                     style="background-color: #78938A;">Update
                                                     Company Data</a>
                                             </div>

@@ -257,11 +257,6 @@ require_once("../koneksi/require.php");
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $kriteria = $_POST['kriteria'];
-    $email = $_POST['email'];
-    $alamat = $_POST['alamat'];
-    $nohp = $_POST['nohp'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
     $update = mysqli_query($conn, "UPDATE kriteria set kriteria='$kriteria' where kriteria.id = '$id'");
     if ($update) {
         echo "<script>
