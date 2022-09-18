@@ -342,8 +342,9 @@ require_once("../koneksi/require.php");
 <?php
 if (isset($_POST['hapus'])) {
     $id = $_POST['id'];
-    $hapus = mysqli_query($conn, "DELETE FROM nilai WHERE id='$id'");
-    if ($hapus) {
+    $detail = mysqli_query($conn, "DELETE FROM detailnilai WHERE idNilai='$id'");
+    if ($detail) {
+        $hapus = mysqli_query($conn, "DELETE FROM nilai WHERE id='$id'");
         echo "<script>document.location='internvalue.php'</script>";
     } else {
         echo "Pesan" . mysqli_error($conn);

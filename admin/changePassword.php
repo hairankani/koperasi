@@ -136,7 +136,7 @@ $get = mysqli_fetch_assoc($user);
         </div>
     </div>
 
-    <?php include('script-intern.php') ?>
+    <?php include('script-admin.php') ?>
 </body>
 
 </html>
@@ -157,7 +157,7 @@ if(isset($_POST['changePassword']))
         if($query_run)
         {
             echo "<script>
-            document.location='index-magang.php'
+            document.location='index-admin.php'
             </script>";
         }
         else

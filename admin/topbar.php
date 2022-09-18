@@ -54,9 +54,9 @@ if(!isset($_SESSION['username'])){
         <!-- Nav Item - Messages -->
 
 
-        <div class="topbar-divider d-none d-sm-block">
+        <!-- <div class="topbar-divider d-none d-sm-block">
             <h4>Setting</h4>
-        </div>
+        </div> -->
 
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
@@ -75,6 +75,10 @@ if(!isset($_SESSION['username'])){
                 <a class="dropdown-item" href="updateCompany.php">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Update Company Profile
+                </a>
+                <a class="dropdown-item" href="changePassword.php">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Change Password
                 </a>
                 <!-- <a class="dropdown-item" href="help.php">
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>

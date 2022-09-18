@@ -13,8 +13,8 @@ if(!isset($_SESSION['username'])){
 $id = $_SESSION['id'];
 // var_dump($id); die();
     
-    $detail = mysqli_query($conn, "SELECT nilai.id, nilai.rata_rata, nilai.predikat, magang.nama_magang, magang.instansi, detailnilai.* from magang inner join nilai on magang.id = nilai.idMagang inner join detailnilai on nilai.id = detailnilai.idNilai where magang.userId = $id");
-    $result = mysqli_fetch_assoc($detail);
+$detail = mysqli_query($conn, "SELECT nilai.id, nilai.rata_rata, nilai.predikat, magang.nama_magang, magang.instansi, detailnilai.* from magang inner join nilai on magang.id = nilai.idMagang inner join detailnilai on nilai.id = detailnilai.idNilai where magang.userId = $id");
+                                $result = mysqli_fetch_assoc($detail);
 
 
 $kriteria = mysqli_query($conn, "SELECT kriteria FROM kriteria");
@@ -65,8 +65,10 @@ $no=1;
                             style="background-color: #ECB390;"><i class="fas fa-download fa-sm text-white-50"></i>
                             Generate Report</a> -->
                     </div>
-
-                    <!-- Content Row -->
+                    <?php if ($result != null && $resultKriteria != null ) { ?>
+                    <?php 
+                                
+                            ?>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card shadow h-100 py-2" style="background-color: #fff;">
@@ -183,6 +185,12 @@ $no=1;
 
 
                     </div>
+                    <?php } else {?>
+                    <h1>ga ada</h1>
+
+                    <!-- Content Row -->
+
+                    <?php } ?>
                     <!-- /.container-fluid -->
 
                 </div>

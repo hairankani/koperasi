@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include 'koneksi/db.php';
+    include '../koneksi/db.php';
  
     // menangkap data yang dikirim dari form login
     $username = $_POST['username'];
@@ -23,7 +23,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "magang";
             $_SESSION['id'] = $get['id'];
-            header("location:magang/index-magang.php");
+            header("location:../magang/index-magang.php");
         }
 
         
