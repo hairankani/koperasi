@@ -77,13 +77,13 @@ $no=1;
                                                 <div class="card-body">
                                                     <table cellpadding="5" class="biodata" id="biodata">
                                                         <tr style="font-size: 24px">
-                                                            <td>Nama</td>
+                                                            <td>Name</td>
                                                             <td>:</td>
                                                             <td class="text-uppercase"><?= $result['nama_magang']; ?>
                                                             </td>
                                                         </tr>
                                                         <tr style="font-size: 24px">
-                                                            <td>Instansi</td>
+                                                            <td>Agency</td>
                                                             <td>:</td>
                                                             <td><?= $result['instansi']; ?></td>
                                                         </tr>
@@ -98,8 +98,8 @@ $no=1;
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">No. </th>
-                                                        <th scope="col">Kriteria</th>
-                                                        <th scope="col">Nilai</th>
+                                                        <th scope="col">Criteria</th>
+                                                        <th scope="col">Value</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -161,11 +161,11 @@ $no=1;
                                                 </tbody>
                                                 <tfoot>
                                                     <tr>
-                                                        <td colspan="2" class="text-center">Nilai Rata Rata</td>
+                                                        <td colspan="2" class="text-center">Average Value</td>
                                                         <td><?= $result['rata_rata']; ?></td>
                                                     </tr>
                                                     <tr>
-                                                        <td colspan="2" class="text-center">Predikat</td>
+                                                        <td colspan="2" class="text-center">Predicate</td>
                                                         <td><?= $result['predikat']; ?></td>
                                                     </tr>
                                                 </tfoot>
@@ -214,8 +214,10 @@ $no=1;
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="logout.php">Logout</a>
+                        <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                            data-dismiss="modal">Cancel</button>
+                        <a class="btn" style="background-color: #F0C2A6; font-weight: bold;"
+                            href="logout.php">Logout</a>
                     </div>
                 </div>
             </div>

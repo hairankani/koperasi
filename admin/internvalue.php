@@ -86,10 +86,10 @@ require_once("../koneksi/require.php");
                                 <form action="tambahvalue.php" method="POST">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <label>Nama Magang</label>
+                                            <label>Name Intern</label>
                                             <select class="form-select" name="idMagang" id="id" onchange="otomatis()"
                                                 aria-label="Default select example">
-                                                <option selected>Pilih Magang</option>
+                                                <option selected>Choose Intern</option>
                                                 <?php
                                                     // Kita akan ambil Nama Petugas yang ada pada tabel Petugas
                                                     $magang = mysqli_query($conn, "SELECT * FROM magang ");
@@ -102,11 +102,11 @@ require_once("../koneksi/require.php");
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label>Instansi</label>
+                                            <label>Agency</label>
                                             <input type="text" name="instansi" id="instansi" class="form-control"
                                                 readonly>
                                         </div>
-                                        <label>Penilaian</label>
+                                        <label>Evaluation</label>
                                         <?php
                                         $kriteria = mysqli_query($conn, "SELECT kriteria FROM kriteria");
                                         while($r = mysqli_fetch_assoc($kriteria)){ 
@@ -116,14 +116,16 @@ require_once("../koneksi/require.php");
                                                 aria-label="Username" value="<?= $r['kriteria'] ?>" readonly>
                                             <span class="input-group-text">-</span>
                                             <input type="number" class="form-control" name="nilai[]"
-                                                placeholder="Input Nilai" aria-label="Server">
+                                                placeholder="Input Value" aria-label="Server">
                                         </div>
                                         <?php } ?>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn"
+                                            style="background-color: #D4C9D9; font-weight: bold;"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" name="insertdatavalue" class="btn btn-primary">Save
+                                        <button type="submit" name="insertdatavalue" class="btn"
+                                            style="background-color: #F0C2A6; font-weight: bold;">Save
                                         </button>
                                     </div>
                                 </form>
@@ -140,11 +142,11 @@ require_once("../koneksi/require.php");
                             <thead>
                                 <tr>
                                     <th scope="col" rowspan="2" class="text-center">No. </th>
-                                    <th scope="col" rowspan="2">Nama Magang</th>
-                                    <th scope="col" rowspan="2">Instansi</th>
-                                    <th scope="col" class="text-center" colspan="5">Kriteria</th>
-                                    <th scope="col" rowspan="2">Rata Rata Nilai</th>
-                                    <th scope="col" rowspan="2">Predikat</th>
+                                    <th scope="col" rowspan="2">Name Intern</th>
+                                    <th scope="col" rowspan="2">Agency</th>
+                                    <th scope="col" class="text-center" colspan="5">Criteria</th>
+                                    <th scope="col" rowspan="2">Average Value</th>
+                                    <th scope="col" rowspan="2">Predicate</th>
                                     <th scope="col" rowspan="2">Action</th>
                                 </tr>
                                 <tr>
@@ -250,8 +252,9 @@ require_once("../koneksi/require.php");
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                        data-dismiss="modal">Cancel</button>
+                    <a class="btn" style="background-color: #F0C2A6; font-weight: bold;" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

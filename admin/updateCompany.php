@@ -67,7 +67,7 @@ $result = mysqli_fetch_assoc($detail);
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Edit Profile</h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Update Company Profile</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -80,33 +80,32 @@ $result = mysqli_fetch_assoc($detail);
                                             value="<?= $result['id'] ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="nama" class="col-form-label" style="color: #16161a">Nama
-                                                    Perusahaan</label>
+                                                <label for="nama" class="col-form-label" style="color: #16161a">Company
+                                                    Name</label>
                                                 <input type="text" name="nama_perusahaan" class="form-control"
                                                     value="<?= $result['nama_perusahaan'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="jenis" class="col-form-label" style="color: #16161a">Jenis
-                                                    Perusahaan</label>
+                                                <label for="jenis" class="col-form-label" style="color: #16161a">Type Of
+                                                    Company</label>
                                                 <input type="text" name="jenis_perusahaan" class="form-control"
                                                     value="<?= $result['jenis_perusahaan'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="tentang" class="col-form-label"
-                                                    style="color: #16161a">Tentang
-                                                    Perusahaan</label>
+                                                <label for="tentang" class="col-form-label" style="color: #16161a">About
+                                                    Company</label>
                                                 <textarea class="form-control" name="tentang"
                                                     rows="3"><?= $result['tentang'] ?></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="alamat" class="col-form-label" style="color: #16161a">Alamat
-                                                    Perusahaan</label>
+                                                <label for="alamat" class="col-form-label"
+                                                    style="color: #16161a">Company's Address</label>
                                                 <textarea class="form-control" name="alamat"
                                                     placeholder="Add Alamat Perusahaan"
                                                     rows="3"><?= $result['alamat'] ?></textarea>
@@ -114,16 +113,16 @@ $result = mysqli_fetch_assoc($detail);
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="nohp" class="col-form-label" style="color: #16161a">Nomor HP
-                                                    Perusahaan</label>
+                                                <label for="nohp" class="col-form-label" style="color: #16161a">Company
+                                                    Phone Number</label>
                                                 <input type="number" name="nohp" class="form-control"
                                                     value="<?= $result['nohp'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="email" class="col-form-label" style="color: #16161a">Email
-                                                    Perusahaan</label>
+                                                <label for="email" class="col-form-label" style="color: #16161a">Company
+                                                    Email</label>
                                                 <input type="email" name="email" class="form-control"
                                                     value="<?= $result['email'] ?>">
                                             </div>
@@ -131,8 +130,7 @@ $result = mysqli_fetch_assoc($detail);
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="website" class="col-form-label"
-                                                    style="color: #16161a">Website
-                                                    Perusahaan</label>
+                                                    style="color: #16161a">Company Website</label>
                                                 <input type="text" name="website" class="form-control"
                                                     value="<?= $result['website'] ?>">
                                             </div>
@@ -140,16 +138,17 @@ $result = mysqli_fetch_assoc($detail);
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="website" class="col-form-label"
-                                                    style="color: #16161a">Social Media
-                                                    Perusahaan</label>
+                                                    style="color: #16161a">Company Social Media
+                                                </label>
                                                 <input type="text" name="sosmed" class="form-control"
                                                     value="<?= $result['sosmed'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="image" class="col-form-label" style="color: #16161a">Logo
-                                                    Perusahaan</label>
+                                                <label for="image" class="col-form-label" style="color: #16161a">Company
+                                                    Logo
+                                                </label>
                                                 <input class="form-control" type="file" name="image" id="image"
                                                     value="<?= $result['image'] != null ? $result['image'] : $result['image'] ?>">
                                                 <input type="hidden" name="oldimage" value="<?= $result['image'] ?>">
@@ -158,10 +157,10 @@ $result = mysqli_fetch_assoc($detail);
 
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-admin.php" class="btn btn-md btn-secondary text-light mt-4 mb-4"
-                                        style="font-weight: bold;margin-right: 2%">Back</a>
+                                    <a href="index-admin.php" class="btn mt-4 mb-4"
+                                        style="background-color: #D4C9D9; font-weight: bold; margin-right: 2%">Back</a>
                                     <button type="submit" name="updatecompany" class="btn btn-md mt-4 mb-4"
-                                        style="background: #c9bbcf;color: #16161a ;margin-right: 2%">Submit</button>
+                                        style="background-color: #F0C2A6; font-weight: bold; margin-right: 2%">Submit</button>
                                 </div>
                                 </form>
                             </div>
@@ -199,8 +198,9 @@ $result = mysqli_fetch_assoc($detail);
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                        data-dismiss="modal">Cancel</button>
+                    <a class="btn" style="background-color: #F0C2A6; font-weight: bold;" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

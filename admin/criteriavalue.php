@@ -65,15 +65,17 @@ require_once("../koneksi/require.php");
                                 <form action="tambahkriteria.php" method="POST">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <label>Kriteria</label>
+                                            <label>Criteria</label>
                                             <input type="text" name="kriteria" class="form-control"
-                                                placeholder="Input Kriteria">
+                                                placeholder="Input Criteria">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn"
+                                            style="background-color: #D4C9D9; font-weight: bold;"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" name="insertdatacriteria" class="btn btn-primary">Save
+                                        <button type="submit" name="insertdatacriteria" class="btn"
+                                            style="background-color: #F0C2A6; font-weight: bold;">Save
                                         </button>
                                     </div>
                                 </form>
@@ -90,7 +92,7 @@ require_once("../koneksi/require.php");
                             <thead>
                                 <tr>
                                     <th scope="col">No. </th>
-                                    <th scope="col">Kriteria</th>
+                                    <th scope="col">Criteria</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -217,8 +219,9 @@ require_once("../koneksi/require.php");
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                        data-dismiss="modal">Cancel</button>
+                    <a class="btn" style="background-color: #F0C2A6; font-weight: bold;" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

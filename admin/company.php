@@ -113,10 +113,11 @@ $get = mysqli_fetch_assoc($company);
                                     <h2 class="fw-bold" style="margin-top: 5%">About</h2>
                                     <h3>
                                         <?= $r['tentang']?></h3>
-                                    <h3 class="fw-bold" style="margin-top: 8%;"><?= $r['alamat']?></h3>
+                                    <h3 class="fw-bold" style="margin-top: 8%;"><?= $r['email']?></h3>
                                     <h3 class="fw-bold"><?= $r['nohp']?></h3>
                                     <h3 class="fw-bold"><a href="<?= $r['website']?>"
                                             target="_blank"><?= $r['website']?></a></h3>
+                                    <h3 class="fw-bold"><?= $r['alamat']?></h3>
                                 </div>
 
                             </div>

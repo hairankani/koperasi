@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include '../koneksi/db.php';
+    include 'koneksi/db.php';
  
     // menangkap data yang dikirim dari form login
     $username = $_POST['username'];
@@ -18,16 +18,16 @@
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "admin";
             $_SESSION['id'] = $get['id'];
-            header("location: index-admin.php");
+            header("location:index-admin.php");
         } else if ($get['level'] == 'magang'){
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "magang";
             $_SESSION['id'] = $get['id'];
-            header("location: ../magang/index-magang.php");
+            header("location:magang/index-magang.php");
         }
 
         
     } else{
-        header("location:../index.php?pesan=gagal");
+        header("location:index.php?pesan=gagal");
     }
 ?>

@@ -18,9 +18,6 @@ if(!isset($_SESSION['username'])){
     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-5 my-2 my-md-0 mw-100 navbar-search">
         <div class="input-group">
             <h4 style="padding-top: 5px">Welcome, <?= $username; ?>!🙋🏻‍♀️</h4>
-
-
-
         </div>
     </form>
 
@@ -57,10 +54,13 @@ if(!isset($_SESSION['username'])){
         <!-- Nav Item - Messages -->
 
 
-        <div class="topbar-divider d-none d-sm-block"></div>
+        <div class="topbar-divider d-none d-sm-block">
+            <h4>Setting</h4>
+        </div>
 
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
+
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
 
@@ -70,16 +70,16 @@ if(!isset($_SESSION['username'])){
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="company.php">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
+                    Company Profile
                 </a>
                 <a class="dropdown-item" href="updateCompany.php">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Update Company
+                    Update Company Profile
                 </a>
-                <a class="dropdown-item" href="help.php">
+                <!-- <a class="dropdown-item" href="help.php">
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Help
-                </a>
+                </a> -->
                 <!-- <a class="dropdown-item" href="#">
                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                     Activity Log

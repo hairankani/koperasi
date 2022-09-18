@@ -66,7 +66,7 @@ $get = mysqli_fetch_assoc($magang);
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Edit Profile</h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Update Your Profile!</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -96,7 +96,7 @@ $get = mysqli_fetch_assoc($magang);
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="nama" class="col-form-label"
-                                                    style="color: #16161a">Nama</label>
+                                                    style="color: #16161a">Name</label>
                                                 <input type="text" name="nama_magang" class="form-control"
                                                     value="<?= $get['nama_magang'] ?>">
                                             </div>
@@ -104,8 +104,8 @@ $get = mysqli_fetch_assoc($magang);
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="instansi" class="col-form-label" style="color: #16161a">Asal
-                                                    Instansi
+                                                <label for="instansi" class="col-form-label"
+                                                    style="color: #16161a">Agency
                                                 </label>
                                                 <input type="text" name="instansi" class="form-control"
                                                     value="<?= $get['instansi'] ?>">
@@ -121,7 +121,8 @@ $get = mysqli_fetch_assoc($magang);
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="alamat" class="col-form-label" style="color: #16161a">Alamat
+                                                <label for="alamat" class="col-form-label"
+                                                    style="color: #16161a">Address
                                                 </label>
                                                 <textarea class="form-control" name="alamat"
                                                     rows="3"><?= $get['alamat'] ?></textarea>
@@ -129,7 +130,8 @@ $get = mysqli_fetch_assoc($magang);
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="nohp" class="col-form-label" style="color: #16161a">Nomor HP
+                                                <label for="nohp" class="col-form-label" style="color: #16161a">Phone
+                                                    Number
                                                 </label>
                                                 <input type="number" name="nohp" class="form-control"
                                                     value="<?= $get['nohp'] ?>">
@@ -141,16 +143,16 @@ $get = mysqli_fetch_assoc($magang);
                                                 <label><input type="radio" name="jeniskelamin" value="Laki-Laki"
                                                         <?php if($get['jeniskelamin']=='Laki-Laki'){?> checked="checked" <?php
                                                         }?>>
-                                                    Laki-Laki</label>
+                                                    Male</label>
                                                 <label><input type="radio" name="jeniskelamin" value="Perempuan"
                                                         <?php if($get['jeniskelamin']=='Perempuan'){?>checked="checked" <?php
                                                         }?>>
-                                                    Perempuan</label>
+                                                    Female</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="image" class="col-form-label" style="color: #16161a">Foto
+                                                <label for="image" class="col-form-label" style="color: #16161a">Picture
                                                 </label>
                                                 <input class="form-control" type="file" name="image" id="image">
                                                 <input type="hidden" name="oldimage" value="<?= $get['image'] ?>">
@@ -200,8 +202,9 @@ $get = mysqli_fetch_assoc($magang);
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                        data-dismiss="modal">Cancel</button>
+                    <a class="btn" style="background-color: #F0C2A6; font-weight: bold;" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

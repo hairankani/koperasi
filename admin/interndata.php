@@ -82,9 +82,9 @@ require_once("../koneksi/require.php");
                                                 placeholder="Input Name's Intern">
                                         </div>
                                         <div class="form-group">
-                                            <label>Instansi</label>
+                                            <label>Agency</label>
                                             <input type="text" name="instansi" class="form-control"
-                                                placeholder="Input Instansi">
+                                                placeholder="Input Agency">
                                         </div>
                                         <div class="form-group">
                                             <label>Email</label>
@@ -109,7 +109,7 @@ require_once("../koneksi/require.php");
                                                 Perempuan</label>
                                         </div>
                                         <div class="form-group">
-                                            <label>Start Internr</label>
+                                            <label>Start Intern</label>
                                             <input type="date" name="startIntern" class="form-control">
                                         </div>
                                         <div class="form-group">
@@ -120,9 +120,11 @@ require_once("../koneksi/require.php");
 
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
+                                        <button type="button" class="btn"
+                                            style="background-color: #D4C9D9; font-weight: bold;"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" name="insertdataintern" class="btn btn-primary">Save
+                                        <button type="submit" name="insertdataintern" class="btn"
+                                            style="background-color: #F0C2A6; font-weight: bold;">Save
                                         </button>
                                     </div>
                                 </form>
@@ -140,7 +142,7 @@ require_once("../koneksi/require.php");
                                 <tr>
                                     <th scope="col">No. </th>
                                     <th scope="col">Full Name</th>
-                                    <th scope="col">Instansi</th>
+                                    <th scope="col">Agency</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Phone Number</th>
@@ -228,7 +230,7 @@ require_once("../koneksi/require.php");
                                                             class="form-control" value="<?= $row['nama_magang']; ?>">
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label>Instansi</label>
+                                                        <label>Agency</label>
                                                         <input type="text" name="instansi" id="instansi"
                                                             class="form-control" value="<?= $row['instansi']; ?>">
                                                     </div>
@@ -312,8 +314,9 @@ require_once("../koneksi/require.php");
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                        data-dismiss="modal">Cancel</button>
+                    <a class="btn" style="background-color: #F0C2A6; font-weight: bold;" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

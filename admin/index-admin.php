@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once("../koneksi/db.php");
+require_once("koneksi/db.php");
 //Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['username'])){
-    header("location: login-admin.php");
+    header("location: index.php");
 }else{
     // Jika sudah dibuatkan sesi maka akan kita masukkan kedalam variabel
     $username = $_SESSION['username'];
@@ -146,11 +146,11 @@ if(!isset($_SESSION['username'])){
                                         <div class="col-lg-4">
                                             <img src="../img/koalaremove.png" alt="">
                                         </div>
-                                        <div class="col-lg-8">
-                                            <h5>Hi, <?= $username; ?></h5>
-                                            <h5>If the intern has finished carrying out of the
-                                                internship in accordance with specified time span,
-                                                please rate it in the Intern Value!</h5>
+                                        <div class="col-lg-8" style="color: #ffff;">
+                                            <h3><b>Hi, <?= $username; ?>!</h5></b>
+                                                <h4>If the intern has finished carrying out of the
+                                                    internship in accordance with specified time span,
+                                                    please rate it in the Intern Value!</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -194,8 +194,10 @@ if(!isset($_SESSION['username'])){
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="logout.php">Logout</a>
+                        <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                            data-dismiss="modal">Cancel</button>
+                        <a class="btn" style="background-color: #F0C2A6; font-weight: bold;"
+                            href="logout.php">Logout</a>
                     </div>
                 </div>
             </div>

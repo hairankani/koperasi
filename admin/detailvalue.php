@@ -61,9 +61,22 @@ $no=1;
                     </br>
 
                     <!-- //add intern -->
-                    <p><a href="internvalue.php" type="button" class="btn text-light"
-                            style="background-color: #78938A;">Back</a>
-                    </p>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <p><a href="internvalue.php" type="button" class="btn"
+                                    style="background-color: #D4C9D9; font-weight: bold;">Back</a>
+
+                            </p>
+                        </div>
+                        <div class="col-lg-2" style="margin-left: -10%">
+                            <p><a href="internvalue.php" type="button" class="btn"
+                                    style="background-color: #F0C2A6; font-weight: bold;">Certificate</a>
+
+                            </p>
+                        </div>
+                    </div>
+
+
 
 
 
@@ -200,8 +213,9 @@ $no=1;
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
+                    <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                        data-dismiss="modal">Cancel</button>
+                    <a class="btn" style="background-color: #F0C2A6; font-weight: bold;" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

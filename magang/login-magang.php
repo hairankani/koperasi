@@ -55,7 +55,6 @@ if(isset($_SESSION['username'])){
                                             <input type="password" name="password"
                                                 class="form-control form-control-user" id="exampleInputPassword"
                                                 placeholder=" Input Password">
-                                            <i class="fas fa-key"></i>
                                         </div>
                                         <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">

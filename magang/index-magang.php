@@ -63,8 +63,8 @@ if(!isset($_SESSION['username'])){
                                         <div class="col-lg-4">
                                             <img src="../img/koalaremove.png" alt="">
                                         </div>
-                                        <div class="col-lg-8">
-                                            <h5>Hi, <?= $username; ?></h5>
+                                        <div class="col-lg-8" style="color: #fff;">
+                                            <h5>Hi, <?= $username; ?>!</h5>
                                             <h5>Currently, u're doing an internship at
                                                 PT. Visi Karya Prakarsa. To view details value of
                                                 the internship results, please click on view grades!</h5>
@@ -105,8 +105,10 @@ if(!isset($_SESSION['username'])){
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="logout.php">Logout</a>
+                        <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
+                            data-dismiss="modal">Cancel</button>
+                        <a class="btn" style="background-color: #F0C2A6; font-weight: bold;"
+                            href="logout.php">Logout</a>
                     </div>
                 </div>
             </div>
