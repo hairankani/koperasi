@@ -191,12 +191,12 @@ $result = mysqli_fetch_assoc($detail);
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Are you sure want to Logout?😟</div>
                 <div class="modal-footer">
                     <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                         data-dismiss="modal">Cancel</button>

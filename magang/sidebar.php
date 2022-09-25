@@ -1,10 +1,10 @@
-<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #a4b8ac;" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #a4b1a0;" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-            <!-- <i class="fas fa-laugh-wink"></i> -->
-            <i class="fa fa-building"></i>
+            <!-- <i class="fa fa-building"></i> -->
+            <img src="../img/logo-antrique.png" width="100">
         </div>
         <div class="sidebar-brand-text mx-3">SP<sup>intern</sup></div>
     </a>

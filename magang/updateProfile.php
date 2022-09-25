@@ -89,7 +89,7 @@ $get = mysqli_fetch_assoc($magang);
                                                 <label for="username" class="col-form-label"
                                                     style="color: #16161a">Username
                                                 </label>
-                                                <input type="text" name="username" class="form-control"
+                                                <input type="text" name="username" required class="form-control"
                                                     value="<?= $get['username'] ?>">
                                             </div>
                                         </div>
@@ -97,7 +97,7 @@ $get = mysqli_fetch_assoc($magang);
                                             <div class="form-group">
                                                 <label for="nama" class="col-form-label"
                                                     style="color: #16161a">Name</label>
-                                                <input type="text" name="nama_magang" class="form-control"
+                                                <input type="text" name="nama_magang" required class="form-control"
                                                     value="<?= $get['nama_magang'] ?>">
                                             </div>
                                         </div>
@@ -107,7 +107,7 @@ $get = mysqli_fetch_assoc($magang);
                                                 <label for="instansi" class="col-form-label"
                                                     style="color: #16161a">Agency
                                                 </label>
-                                                <input type="text" name="instansi" class="form-control"
+                                                <input type="text" name="instansi" required class="form-control"
                                                     value="<?= $get['instansi'] ?>">
                                             </div>
                                         </div>
@@ -115,13 +115,13 @@ $get = mysqli_fetch_assoc($magang);
                                             <div class="form-group">
                                                 <label for="email" class="col-form-label" style="color: #16161a">Email
                                                 </label>
-                                                <input type="email" name="email" class="form-control"
+                                                <input type="email" name="email" required class="form-control"
                                                     value="<?= $get['email'] ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="alamat" class="col-form-label"
+                                                <label for="alamat" class="col-form-label" required
                                                     style="color: #16161a">Address
                                                 </label>
                                                 <textarea class="form-control" name="alamat"
@@ -133,7 +133,7 @@ $get = mysqli_fetch_assoc($magang);
                                                 <label for="nohp" class="col-form-label" style="color: #16161a">Phone
                                                     Number
                                                 </label>
-                                                <input type="number" name="nohp" class="form-control"
+                                                <input type="number" name="nohp" required class="form-control"
                                                     value="<?= $get['nohp'] ?>">
                                             </div>
                                         </div>
@@ -161,10 +161,10 @@ $get = mysqli_fetch_assoc($magang);
 
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-magang.php" class="btn btn-md btn-secondary text-light mt-4 mb-4"
-                                        style="font-weight: bold;margin-right: 2%">Back</a>
+                                    <a href="index-magang.php" class="btn mt-4 mb-4"
+                                        style="background-color: #D4C9D9; font-weight: bold; margin-right: 2%">Back</a>
                                     <button type="submit" name="updateprofile" class="btn btn-md mt-4 mb-4"
-                                        style="background: #c9bbcf;color: #16161a ;margin-right: 2%">Submit</button>
+                                        style="background-color: #F0C2A6; font-weight: bold; margin-right: 2%">Submit</button>
                                 </div>
                                 </form>
                             </div>
@@ -195,12 +195,12 @@ $get = mysqli_fetch_assoc($magang);
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Are you sure want to Logout?😟</div>
                 <div class="modal-footer">
                     <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                         data-dismiss="modal">Cancel</button>

@@ -77,6 +77,14 @@ $no=1;
                                         <div class="col-lg-12">
                                             <div class="card mb-3 border-0" style="width: 18rem;">
                                                 <div class="card-body">
+                                                    <div class="col-lg-2" style="margin-left: -10%">
+
+                                                        <p><a href="../admin/certificate1.php?id=<?= $result['id']; ?>"
+                                                                target="_blank" type="button" class="btn"
+                                                                style="background-color: #F0C2A6; font-weight: bold;">Certificate</a>
+
+                                                        </p>
+                                                    </div>
                                                     <table cellpadding="5" class="biodata" id="biodata">
                                                         <tr style="font-size: 24px">
                                                             <td>Name</td>
@@ -186,7 +194,7 @@ $no=1;
 
                     </div>
                     <?php } else {?>
-                    <h1>ga ada</h1>
+                    <h2 style="text-align: center;">Sorry, Admin at your company hasn't done an assessment yet!😔</h2>
 
                     <!-- Content Row -->
 
@@ -215,12 +223,12 @@ $no=1;
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Are you sure want to Logout?😟</div>
                     <div class="modal-footer">
                         <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                             data-dismiss="modal">Cancel</button>

@@ -168,11 +168,11 @@ require_once("../koneksi/require.php");
                                 <td class="text-center text-dark"><?= $no ?></td>
                                 <td class="text-dark"><?= $r['nama_magang']; ?></td>
                                 <td class="text-dark"><?= $r['instansi']; ?></td>
-                                <td class="text-dark"><?= $r['nilaiA']; ?></td>
-                                <td class="text-dark"><?= $r['nilaiB']; ?></td>
-                                <td class="text-dark"><?= $r['nilaiC']; ?></td>
-                                <td class="text-dark"><?= $r['nilaiD']; ?></td>
-                                <td class="text-dark"><?= $r['nilaiE']; ?></td>
+                                <td required class="text-dark"><?= $r['nilaiA']; ?></td>
+                                <td required class="text-dark"><?= $r['nilaiB']; ?></td>
+                                <td required class="text-dark"><?= $r['nilaiC']; ?></td>
+                                <td required class="text-dark"><?= $r['nilaiD']; ?></td>
+                                <td required class="text-dark"><?= $r['nilaiE']; ?></td>
                                 <td class="text-dark"><?= $r['rata_rata']; ?></td>
                                 <td class="text-dark"><?= $r['predikat']; ?></td>
                                 <td class="">
@@ -245,12 +245,12 @@ require_once("../koneksi/require.php");
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Are you sure want to Logout?😟</div>
                 <div class="modal-footer">
                     <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                         data-dismiss="modal">Cancel</button>

@@ -61,18 +61,11 @@ $get = mysqli_fetch_assoc($magang);
 
                     <!-- Content Row -->
                     <div class="row">
-                        <div class="col-lg-12 align-items-center text-center"
-                            style="background: #fff;border-radius: 15px;height: 165px;border: 3px solid #A5C9CA; position: relative; z-index: 1">
-                            <!-- <div class="card"
-                                    style="width: 25%; margin: auto; border-color: #000; margin-top: 15px;"> -->
-                            <!-- <div class="card-body"> -->
-                            <?php if ($get['image'] == null) { ?>
-                            <img src="../img/koalaremove.png" alt="" width="200">
-                            <?php } else { ?>
-                            <img src="../img/<?= $get['image']?>" alt="" style="margin-top: 10px;">
-                            <?php } ?>
-                            <!-- </div> -->
-                            <!-- </div> -->
+                        <div class="col-auto">
+                            <div class="avatar avatar-xl position-relative">
+                                <img src="../img/<?= $get['image']?>" alt="..."
+                                    class="w-100 border-radius-lg shadow-sm">
+                            </div>
                         </div>
                         <div class="col-lg-12"
                             style="background: #fff;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;border: 3px solid #A5C9CA; margin-top: -10px">
@@ -116,12 +109,12 @@ $get = mysqli_fetch_assoc($magang);
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                    <div class="modal-body">Are you sure want to Logout?😟
                     </div>
                     <div class="modal-footer">
                         <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"

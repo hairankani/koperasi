@@ -72,7 +72,7 @@ $get = mysqli_fetch_assoc($user);
                                             <div class="form-group">
                                                 <label for="password" class="col-form-label" style="color: #16161a">New
                                                     Password</label>
-                                                <input type="password" name="password" class="form-control"
+                                                <input type="password" name="password" required class="form-control"
                                                     placeholder="Add Password">
                                             </div>
                                         </div>
@@ -81,16 +81,16 @@ $get = mysqli_fetch_assoc($user);
                                                 <label for="pw" class="col-form-label" style="color: #16161a">Confirm
                                                     Password
                                                 </label>
-                                                <input type="password" name="pw" class="form-control"
+                                                <input type="password" name="pw" required class="form-control"
                                                     placeholder="Add Confirm Password">
                                             </div>
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-magang.php" class="btn btn-md btn-secondary text-light mt-4 mb-4"
-                                        style="font-weight: bold;margin-right: 2%">Back</a>
+                                    <a href="index-magang.php" class="btn mt-4 mb-4"
+                                        style="background-color: #D4C9D9; font-weight: bold; margin-right: 2%">Back</a>
                                     <button type="submit" name="changePassword" class="btn btn-md mt-4 mb-4"
-                                        style="background: #c9bbcf;color: #16161a ;margin-right: 2%">Submit</button>
+                                        style="background-color: #F0C2A6; font-weight: bold; margin-right: 2%">Submit</button>
                                 </div>
                                 </form>
                             </div>
@@ -121,12 +121,12 @@ $get = mysqli_fetch_assoc($user);
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Are you sure want to Logout?😟</div>
                 <div class="modal-footer">
                     <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                         data-dismiss="modal">Cancel</button>

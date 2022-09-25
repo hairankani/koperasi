@@ -59,12 +59,12 @@ if(!isset($_SESSION['username'])){
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2" style="background-color: #CEE5D0;">
+                            <div class="card shadow h-100 py-2" style="background-color: #ADC5B6;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                                Data Kriteria</div>
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                Criteria Data</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 <?php
                                                     $kriteria = mysqli_query($conn,"SELECT * FROM kriteria");
@@ -87,8 +87,8 @@ if(!isset($_SESSION['username'])){
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                                Data Intern</div>
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                Intern Data</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                                 <?php
                                                     $magang = mysqli_query($conn,"SELECT * FROM magang");
@@ -111,8 +111,8 @@ if(!isset($_SESSION['username'])){
                                 <div class="card-body" style="border-radius: 20px;">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-uppercase mb-1">
-                                                Report Nilai</div>
+                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+                                                Value Report</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
@@ -150,7 +150,9 @@ if(!isset($_SESSION['username'])){
                                             <h3><b>Hi, <?= $username; ?>!</h5></b>
                                                 <h4>If the intern has finished carrying out of the
                                                     internship in accordance with specified time span,
-                                                    please rate it in the Intern Value!</h4>
+                                                    please rate it in the <u><a href="internvalue.php"
+                                                            style="color: #fff">Intern
+                                                            Value!</a></u></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -187,12 +189,12 @@ if(!isset($_SESSION['username'])){
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Are you sure want to Logout?😟</div>
                     <div class="modal-footer">
                         <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                             data-dismiss="modal">Cancel</button>

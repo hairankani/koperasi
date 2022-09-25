@@ -78,35 +78,35 @@ require_once("../koneksi/require.php");
                                     <div class="modal-body">
                                         <div class="form-group">
                                             <label>Full Name</label>
-                                            <input type="text" name="nama_magang" class="form-control"
+                                            <input type="text" name="nama_magang" required class="form-control"
                                                 placeholder="Input Name's Intern">
                                         </div>
                                         <div class="form-group">
                                             <label>Agency</label>
-                                            <input type="text" name="instansi" class="form-control"
+                                            <input type="text" name="instansi" required class="form-control"
                                                 placeholder="Input Agency">
                                         </div>
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email" name="email" class="form-control"
+                                            <input type="email" name="email" required class="form-control"
                                                 placeholder="Input Email">
                                         </div>
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <textarea class="form-control" name="alamat"
+                                            <textarea class="form-control" name="alamat" required
                                                 id="exampleFormControlTextarea1" rows="3"></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label>Phone Number</label>
-                                            <input type="number" name="nohp" class="form-control"
+                                            <input type="number" name="nohp" required class="form-control"
                                                 placeholder="Input Phone Number">
                                         </div>
                                         <div class="form-group">
                                             <label>Gender : </label>
                                             <label><input type="radio" name="jeniskelamin" value="Laki-Laki">
-                                                Laki-Laki</label>
+                                                Male</label>
                                             <label><input type="radio" name="jeniskelamin" value="Perempuan">
-                                                Perempuan</label>
+                                                Female</label>
                                         </div>
                                         <div class="form-group">
                                             <label>Start Intern</label>
@@ -226,37 +226,37 @@ require_once("../koneksi/require.php");
                                                     <input type="hidden" name="id" value="<?= $row['id']; ?>">
                                                     <div class="mb-3">
                                                         <label>Full Name</label>
-                                                        <input type="text" name="nama_magang" id="nama_magang"
+                                                        <input type="text" name="nama_magang" required id="nama_magang"
                                                             class="form-control" value="<?= $row['nama_magang']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Agency</label>
-                                                        <input type="text" name="instansi" id="instansi"
+                                                        <input type="text" name="instansi" required id="instansi"
                                                             class="form-control" value="<?= $row['instansi']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Email</label>
-                                                        <input type="text" name="email" id="email" class="form-control"
-                                                            value="<?= $row['email']; ?>">
+                                                        <input type="email" name="email" required id="email"
+                                                            class="form-control" value="<?= $row['email']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Address</label>
-                                                        <input type="text" name="alamat" id="alamat"
+                                                        <input type="text" name="alamat" required id="alamat"
                                                             class="form-control" value="<?= $row['alamat']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Phone Number</label>
-                                                        <input type="text" name="nohp" id="nohp" class="form-control"
-                                                            value="<?= $row['nohp']; ?>">
+                                                        <input type="text" name="nohp" required id="nohp"
+                                                            class="form-control" value="<?= $row['nohp']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Username</label>
-                                                        <input type="text" name="username" id="username"
+                                                        <input type="text" name="username" required id="username"
                                                             class="form-control" value="<?= $row['username']; ?>">
                                                     </div>
                                                     <div class="mb-3">
                                                         <label>Password</label>
-                                                        <input type="text" name="password" id="password"
+                                                        <input type="text" name="password" required id="password"
                                                             class="form-control" value="<?= $row['password']; ?>">
                                                     </div>
                                                     <div class="modal-footer">
@@ -307,12 +307,12 @@ require_once("../koneksi/require.php");
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Are you sure want to Logout?😟</div>
                 <div class="modal-footer">
                     <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                         data-dismiss="modal">Cancel</button>

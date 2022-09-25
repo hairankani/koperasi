@@ -69,8 +69,9 @@ $no=1;
                             </p>
                         </div>
                         <div class="col-lg-2" style="margin-left: -10%">
-                            <p><a href="internvalue.php" type="button" class="btn"
-                                    style="background-color: #F0C2A6; font-weight: bold;">Certificate</a>
+
+                            <p><a href="certificate1.php?id=<?= $result['id']; ?>" target="_blank" type="button"
+                                    class="btn" style="background-color: #F0C2A6; font-weight: bold;">Certificate</a>
 
                             </p>
                         </div>
@@ -83,15 +84,15 @@ $no=1;
                     <div class="card mb-3" style="width: 18rem;">
 
                         <div class="card-body">
-                            <h4>Detail Data Magang</h4>
+                            <h4>Detail Intern Data</h4>
                             <table cellpadding="5" class="biodata" id="biodata">
                                 <tr>
-                                    <td>Nama</td>
+                                    <td>Name</td>
                                     <td>:</td>
                                     <td class="text-uppercase"><?= $result['nama_magang']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Instansi</td>
+                                    <td>Agency</td>
                                     <td>:</td>
                                     <td><?= $result['instansi']; ?></td>
                                 </tr>
@@ -104,8 +105,8 @@ $no=1;
                             <thead>
                                 <tr>
                                     <th scope="col">No. </th>
-                                    <th scope="col">Kriteria</th>
-                                    <th scope="col">Nilai</th>
+                                    <th scope="col">Criteria</th>
+                                    <th scope="col">Value</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -206,12 +207,12 @@ $no=1;
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Are you sure want to Logout?😟</div>
                 <div class="modal-footer">
                     <button class="btn" style="background-color: #D4C9D9; font-weight: bold;" type="button"
                         data-dismiss="modal">Cancel</button>
