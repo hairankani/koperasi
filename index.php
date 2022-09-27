@@ -78,7 +78,13 @@ include 'koneksi/db.php';
                 <div class="row justify-content-center">
 
                     <div class="col-xl-10 col-lg-12 col-md-9">
-
+                        <?php
+        if(isset($_GET['alert'])){
+          if($_GET['alert'] == "gagal"){
+            echo "<div class='alert alert-danger mt-3'><b>LOGIN GAGAL!</b><br>Username atau password salah atau level tidak sesuai</div>";
+          }
+        }
+        ?>
                         <div class="card o-hidden border-0 shadow-lg my-5">
                             <div class="card-body p-0">
                                 <!-- Nested Row within Card Body -->

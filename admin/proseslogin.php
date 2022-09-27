@@ -28,6 +28,7 @@
 
         
     } else{
-        header("location:index.php?pesan=gagal");
+        // echo '<script> alert("Username dan Password Salah"); </script>';
+        header("location:../index.php?alert=gagal");
     }
 ?>
