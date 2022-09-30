@@ -2,7 +2,7 @@
 // session_start();
 require_once("../koneksi/db.php");
 if(!isset($_SESSION['username'])){
-    header("location: login-intern.php");
+    header("location: ../index.php");
 }else{
     $username = $_SESSION['username'];
 }

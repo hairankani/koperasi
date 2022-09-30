@@ -2,8 +2,8 @@
 session_start();
 require_once("../koneksi/db.php");
 //Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
-if(!isset($_SESSION['username'])){
-    header("location: login-intern.php");
+if(!isset($_SESSION['username'])  && !isset($_SESSION['username']) == 'magang'){
+    header("location: ../index.php");
 }else{
     // Jika sudah dibuatkan sesi maka akan kita masukkan kedalam variabel
     $username = $_SESSION['username'];

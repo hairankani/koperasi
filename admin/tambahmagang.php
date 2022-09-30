@@ -16,7 +16,7 @@ if(isset($_POST['insertdataintern']))
     $endIntern = $_POST['endIntern'];;
     $arr = explode(' ',trim($nama_magang));
     $username = $arr[0];
-    $password = password_hash(date("dmY", strtotime($startIntern)), PASSWORD_DEFAULT);
+    $password = md5(date("dmY", strtotime($startIntern)));
     $level = "magang";
     $insertUser = "INSERT into users (`username`,`email`,`password`,`level`) values ('$username','$email','$password','$level')";
     if(mysqli_query($connection, $insertUser))

@@ -3,11 +3,17 @@ session_start();
 require_once("../koneksi/db.php");
 //Jika sesi dari login belum dibuat maka akan kita kembalikan ke halaman login
 if(!isset($_SESSION['username'])){
-    header("location: login-intern.php");
+    header("location: ../index.php");
 }else{
     // Jika sudah dibuatkan sesi maka akan kita masukkan kedalam variabel
+    if ($_SESSION['level'] == 'admin'){
+        header("location: ../index.php");
+    }
     $username = $_SESSION['username'];
     $id = $_SESSION['id'];
+    $level = $_SESSION['level'];
+    var_dump($level);
+    
 }
 $company = mysqli_query($conn, 'SELECT * FROM company');
 $get = mysqli_fetch_assoc($company);

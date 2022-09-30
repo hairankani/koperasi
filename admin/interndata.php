@@ -103,9 +103,9 @@ require_once("../koneksi/require.php");
                                         </div>
                                         <div class="form-group">
                                             <label>Gender : </label>
-                                            <label><input type="radio" name="jeniskelamin" value="Laki-Laki">
+                                            <label><input type="radio" name="jeniskelamin" value="Male">
                                                 Male</label>
-                                            <label><input type="radio" name="jeniskelamin" value="Perempuan">
+                                            <label><input type="radio" name="jeniskelamin" value="Female">
                                                 Female</label>
                                         </div>
                                         <div class="form-group">
@@ -227,6 +227,10 @@ require_once("../koneksi/require.php");
                                                         while ($row = mysqli_fetch_array($query_edit)) {
                                                         ?>
                                                     <input type="hidden" name="id" value="<?= $row['id']; ?>">
+                                                    <input type="hidden" name="username"
+                                                        value="<?= $row['username']; ?>">
+                                                    <input type="hidden" name="password"
+                                                        value="<?= $row['password']; ?>">
                                                     <div class="mb-3">
                                                         <label>Full Name</label>
                                                         <input type="text" name="nama_magang" required id="nama_magang"
@@ -252,16 +256,26 @@ require_once("../koneksi/require.php");
                                                         <input type="text" name="nohp" required id="nohp"
                                                             class="form-control" value="<?= $row['nohp']; ?>">
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label>Username</label>
-                                                        <input type="text" name="username" required id="username"
-                                                            class="form-control" value="<?= $row['username']; ?>">
+                                                    <div class="form-group">
+                                                        <label>Gender : </label>
+                                                        <label><input type="radio" name="jeniskelamin" value="Male"
+                                                                <?php echo ($row['jeniskelamin']=='Male')?'checked':'' ?>>
+                                                            Male</label>
+                                                        <label><input type="radio" name="jeniskelamin" value="Female"
+                                                                <?php echo ($row['jeniskelamin']=='Female')?'checked':''?>>
+                                                            Female</label>
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label>Password</label>
-                                                        <input type="text" name="password" required id="password"
-                                                            class="form-control" value="<?= $row['password']; ?>">
+                                                    <div class="form-group">
+                                                        <label>Start Intern</label>
+                                                        <input type="date" name="startIntern" class="form-control"
+                                                            value="<?= $row['startIntern'] ?>">
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label>End Intern</label>
+                                                        <input type="date" name="endIntern" class="form-control"
+                                                            value="<?= $row['endIntern'] ?>">
+                                                    </div>
+
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn"
                                                             style="background-color: #D4C9D9; font-weight: bold;"
@@ -363,9 +377,12 @@ if (isset($_POST['update'])) {
     $email = $_POST['email'];
     $alamat = $_POST['alamat'];
     $nohp = $_POST['nohp'];
+    $jeniskelamin = $_POST['jeniskelamin'];
+    $startIntern = $_POST['startIntern'];
+    $endIntern = $_POST['endIntern'];
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $update = mysqli_query($conn, "UPDATE magang set nama_magang='$nama_magang', email='$email', alamat='$alamat', nohp='$nohp', username='$username', password='$password' where magang.id = '$id'");
+    $update = mysqli_query($conn, "UPDATE magang set nama_magang='$nama_magang', email='$email', alamat='$alamat', nohp='$nohp', jeniskelamin='$jeniskelamin', startIntern='$startIntern', endIntern='$endIntern', username='$username', password='$password' where magang.id = '$id'");
     if ($update) {
         echo "<script>
         document.location='interndata.php'
