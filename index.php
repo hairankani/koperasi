@@ -81,7 +81,7 @@ include 'koneksi/db.php';
                         <?php
         if(isset($_GET['alert'])){
           if($_GET['alert'] == "gagal"){
-            echo "<div class='alert alert-danger mt-3'><b>LOGIN GAGAL!</b><br>Username atau password salah atau level tidak sesuai</div>";
+            echo "<div class='alert alert-danger mt-3'><b>LOGIN FAILED!</b><br>Username or Password invalid</div>";
           }
         }
         ?>

@@ -150,14 +150,7 @@ $get = mysqli_fetch_assoc($magang);
                                                     Female</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="image" class="col-form-label" style="color: #16161a">Picture
-                                                </label>
-                                                <input class="form-control" type="file" name="image" id="image">
-                                                <input type="hidden" name="oldimage" value="<?= $get['image'] ?>">
-                                            </div>
-                                        </div>
+
 
                                 </div>
                                 <div class="d-flex justify-content-end">

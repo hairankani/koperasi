@@ -61,26 +61,20 @@ $get = mysqli_fetch_assoc($magang);
 
                     <!-- Content Row -->
                     <div class="row">
-                        <div class="col-auto">
-                            <div class="avatar avatar-xl position-relative">
-                                <img src="../img/<?= $get['image']?>" alt="..."
-                                    class="w-100 border-radius-lg shadow-sm">
-                            </div>
-                        </div>
                         <div class="col-lg-12"
                             style="background: #fff;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;border: 3px solid #A5C9CA; margin-top: -10px">
                             <div class="ml-5 mt-3">
-                                <h1 class="fw-bold text-uppercase">
-                                    <?= $get['nama_magang']?></h1>
+                                <h1 class="fw-bold">
+                                    Name : <?= $get['nama_magang']?></h1>
                                 <h2>
-                                    <?= $get['instansi']?></h2>
-                                <h2 class="fw-bold" style="margin-top: 5%"><?= $get['email']?></h2>
+                                    Agency : <?= $get['instansi']?></h2>
+                                <h2 class="fw-bold" style="margin-top: 5%">Email : <?= $get['email']?></h2>
                                 <h3>
-                                    <?= $get['alamat']?></h3>
-                                <h3 class="fw-bold" style="margin-top: 8%;"><?= $get['nohp']?></h3>
-                                <h3 class="fw-bold"><?= $get['jeniskelamin']?></h3>
-                                <h3 class="fw-bold"><?= $get['startIntern']?></h3>
-                                <h3 class="fw-bold"><?= $get['endIntern']?></h3>
+                                    Address : <?= $get['alamat']?></h3>
+                                <h3 class="fw-bold" style="margin-top: 8%;"> Phone Number : <?= $get['nohp']?></h3>
+                                <h3 class="fw-bold">Gender : <?= $get['jeniskelamin']?></h3>
+                                <h3 class="fw-bold">Start Intern : <?= $get['startIntern']?></h3>
+                                <h3 class="fw-bold">End Intern : <?= $get['endIntern']?></h3>
                             </div>
 
                         </div>

@@ -127,12 +127,15 @@ require_once("../koneksi/require.php");
                                             <div class="modal-body">
                                                 <form method="post">
                                                     <input type="hidden" name="id" value="<?= $r['id']; ?>">
-                                                    Are you sure to delete this Intern?
+                                                    Are you sure to delete this Criteria Value?
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
+                                                <button type="button" class="btn"
+                                                    style="background-color: #D4C9D9; font-weight: bold;"
                                                     data-bs-dismiss="modal">No</button>
-                                                <button type="submit" class="btn btn-danger" name="hapus">Yes</button>
+                                                <button type="submit" class="btn"
+                                                    style="background-color: #F0C2A6; font-weight: bold;"
+                                                    name="hapus">Yes</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -165,9 +168,11 @@ require_once("../koneksi/require.php");
                                                             class="form-control" value="<?= $row['kriteria']; ?>">
                                                     </div>
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
+                                                        <button type="button" class="btn"
+                                                            style="background-color: #D4C9D9; font-weight: bold;"
                                                             data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-primary"
+                                                        <button type="submit" class="btn"
+                                                            style="background-color: #F0C2A6; font-weight: bold;"
                                                             name="update">Submit</button>
                                                     </div>
                                             </div>

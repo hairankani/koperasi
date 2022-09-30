@@ -35,7 +35,7 @@ $no=1;
 
     .name {
         position: relative;
-        margin-left: 335px;
+        margin-left: 110px;
         margin-top: 210px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 35px;

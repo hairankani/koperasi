@@ -204,9 +204,12 @@ require_once("../koneksi/require.php");
                                                     Are you sure to delete this Intern Value?
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
+                                                <button type="button" class="btn"
+                                                    style="background-color: #D4C9D9; font-weight: bold;"
                                                     data-bs-dismiss="modal">No</button>
-                                                <button type="submit" class="btn btn-danger" name="hapus">Yes</button>
+                                                <button type="submit" class="btn"
+                                                    style="background-color: #F0C2A6; font-weight: bold;"
+                                                    name="hapus">Yes</button>
                                                 </form>
                                             </div>
                                         </div>

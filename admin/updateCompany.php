@@ -144,16 +144,7 @@ $result = mysqli_fetch_assoc($detail);
                                                     value="<?= $result['sosmed'] ?>">
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label for="image" class="col-form-label" style="color: #16161a">Company
-                                                    Logo
-                                                </label>
-                                                <input class="form-control" type="file" name="image" id="image"
-                                                    value="<?= $result['image'] != null ? $result['image'] : $result['image'] ?>">
-                                                <input type="hidden" name="oldimage" value="<?= $result['image'] ?>">
-                                            </div>
-                                        </div>
+
 
                                 </div>
                                 <div class="d-flex justify-content-end">

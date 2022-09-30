@@ -95,13 +95,8 @@ $get = mysqli_fetch_assoc($company);
                             while ($r = mysqli_fetch_assoc($sql)) {
                             ?>
                             <div class="col-lg-12 align-items-center text-center"
-                                style="background: #fff;border-radius: 15px;height: 165px;border: 3px solid #A5C9CA; position: relative; z-index: 1">
-                                <!-- <div class="card"
-                                    style="width: 25%; margin: auto; border-color: #000; margin-top: 15px;"> -->
-                                <!-- <div class="card-body"> -->
-                                <img src="../img/<?= $r['image']?>" alt="" style="margin-top: 10px;">
-                                <!-- </div> -->
-                                <!-- </div> -->
+                                style="background: #fff;border-radius: 8px;height: 50px;border: 3px solid #A5C9CA; position: relative; z-index: 1">
+
                             </div>
                             <div class="col-lg-12"
                                 style="background: #fff;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;border: 3px solid #A5C9CA; margin-top: -10px">
@@ -113,11 +108,11 @@ $get = mysqli_fetch_assoc($company);
                                     <h2 class="fw-bold" style="margin-top: 5%">About</h2>
                                     <h3>
                                         <?= $r['tentang']?></h3>
-                                    <h3 class="fw-bold" style="margin-top: 8%;"><?= $r['email']?></h3>
-                                    <h3 class="fw-bold"><?= $r['nohp']?></h3>
-                                    <h3 class="fw-bold"><a href="<?= $r['website']?>"
+                                    <h3 class="fw-bold" style="margin-top: 8%;">Email : <?= $r['email']?></h3>
+                                    <h3 class="fw-bold">Phone Number : <?= $r['nohp']?></h3>
+                                    <h3 class="fw-bold">Website : <a href="<?= $r['website']?>"
                                             target="_blank"><?= $r['website']?></a></h3>
-                                    <h3 class="fw-bold"><?= $r['alamat']?></h3>
+                                    <h3 class="fw-bold">Address : <?= $r['alamat']?></h3>
                                 </div>
 
                             </div>
