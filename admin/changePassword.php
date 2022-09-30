@@ -151,7 +151,7 @@ if(isset($_POST['changePassword']))
     $tampungpw2 = $_POST['pw'];
     $level = $_POST['level'];
     if ($tampungpw1 === $tampungpw2){
-        $password = password_hash($tampungpw1, PASSWORD_DEFAULT);
+        $password = md5($tampungpw1);
         $query = "UPDATE users SET email='$email', username='$username', password='$password', level='$level' where users.id = '$id'";
         $query_run = mysqli_query($conn, $query);
         if($query_run)
