@@ -115,9 +115,19 @@ require_once("../koneksi/require.php");
                                             <input type="text" class="form-control" placeholder="Username"
                                                 aria-label="Username" value="<?= $r['kriteria'] ?>" readonly>
                                             <span class="input-group-text">-</span>
-                                            <input type="number" class="form-control" name="nilai[]"
-                                                placeholder="Input Value" aria-label="Server">
+                                            <input type="number" class="form-control" id="hm" name="nilai[]"
+                                                placeholder="Input Value" aria-label="Server" size="4" maxlength="3"
+                                                onchange="changeHandler(this)">
                                         </div>
+                                        <script>
+                                        document.getElementById("hm").onkeyup = function() {
+                                            var input = parseInt(this.value);
+                                            if (input < 0 || input > 100)
+                                                alert("Value should be between 0 - 100");
+                                            return;
+                                        }
+                                        </script>
+                                        </script>
                                         <?php } ?>
                                     </div>
                                     <div class="modal-footer">
