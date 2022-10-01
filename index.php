@@ -12,6 +12,7 @@ include 'koneksi/db.php';
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="img/score.png">
 
     <title>SPK Intern - Login</title>
     <link rel="stylesheet" href="admin/style.css">
