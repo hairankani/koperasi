@@ -1,5 +1,6 @@
 <?php
 require_once("../koneksi/require.php");
+
 ?>
 
 <!doctype html>
@@ -44,7 +45,7 @@ require_once("../koneksi/require.php");
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <h1 class="mt-5 text-center">Criteria Value</h1>
+                    <h1 class="mt-5 text-center">Daftar Anggota</h1>
                     </br>
 
                     <!-- //add intern -->
@@ -93,14 +94,15 @@ require_once("../koneksi/require.php");
                                 <tr>
                                     <th scope="col">No. </th>
                                     <th scope="col">Nomor Anggota</th>
-                                    <th scope="col">Nama Anggota</th>
-                                    <th scope="col">tanggal_bergabung</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Tanggal Bergabung</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
 
                             <?php
                             $sql = mysqli_query($conn, "SELECT * FROM anggota");
+                            
                             $no = 1;
                             while ($r = mysqli_fetch_assoc($sql)) {
                             ?>
@@ -109,92 +111,16 @@ require_once("../koneksi/require.php");
                                 <td class="text-dark"><?= $r['id_anggota']; ?></td>
                                 <td class="text-dark"><?= $r['nama_anggota']; ?></td>
                                 <td class="text-dark"><?= $r['tanggal_bergabung']; ?></td>
-                                <!-- <td class="text-dark"><a href="#" type="button" class="btn text-light"
-                                        style="background-color: #8B0000;" data-bs-toggle="modal"
-                                        data-bs-target="#modalHapus<?php echo $r['id']; ?>">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                    <a href="#" type="button" class="btn text-light" style="background-color: #b4c6dc;"
-                                        data-bs-toggle="modal" data-bs-target="#modalEdit<?php echo $r['id']; ?>">
-                                        <i class="fas fa-pen"></i>
-                                    </a>
-                                </td> -->
-                                <!-- delete -->
-                                <!-- <div class="modal fade" id="modalHapus<?php echo $r['id']; ?>">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Delete Criteria<h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form method="post">
-                                                    <input type="hidden" name="id" value="<?= $r['id']; ?>">
-                                                    Are you sure to delete this Criteria Value?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn"
-                                                    style="background-color: #D4C9D9; font-weight: bold;"
-                                                    data-bs-dismiss="modal">No</button>
-                                                <button type="submit" class="btn"
-                                                    style="background-color: #F0C2A6; font-weight: bold;"
-                                                    name="hapus">Yes</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
 
 
-                                <!-- edit -->
-                                <!-- <div class="modal fade" id="modalEdit<?php echo $r['id']; ?>">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-titlec" id="exampleModalLabel">Edit Criteria</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <form method="post">
-                                                    <?php
-                                                        $id = $r['id'];
-
-                                                        $query_edit = mysqli_query($conn, "SELECT * FROM kriteria WHERE id='$id'");
-                                                        while ($row = mysqli_fetch_array($query_edit)) {
-                                                        ?>
-                                                    <input type="hidden" name="id" value="<?= $row['id']; ?>">
-                                                    <div class="mb-3">
-                                                        <label>Criteria</label>
-                                                        <input type="text" name="kriteria" id="kriteria"
-                                                            class="form-control" value="<?= $row['kriteria']; ?>">
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn"
-                                                            style="background-color: #D4C9D9; font-weight: bold;"
-                                                            data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn"
-                                                            style="background-color: #F0C2A6; font-weight: bold;"
-                                                            name="update">Submit</button>
-                                                    </div>
-                                            </div>
-
-                                            <?php
-                                                        }
-                                            ?>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div> -->
                     </div>
                     </tr>
+
                     <?php $no++;
                             } ?>
                     </table>
 
-                    </table>
+
                 </div>
             </div>
             <!-- /.container-fluid -->
@@ -236,7 +162,7 @@ require_once("../koneksi/require.php");
         </div>
     </div>
 
-    <?php include('../script-admin.php') ?>
+    <?php include('script-admin.php') ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -263,33 +189,3 @@ require_once("../koneksi/require.php");
 </body>
 
 </html>
-
-<?php
-// Proses update
-if (isset($_POST['update'])) {
-    $id = $_POST['id'];
-    $kriteria = $_POST['kriteria'];
-    $update = mysqli_query($conn, "UPDATE kriteria set kriteria='$kriteria' where kriteria.id = '$id'");
-    if ($update) {
-        echo "<script>
-        document.location='criteriavalue.php'
-        </script>";
-    } else {
-        echo "<script>
-        alert('Gagal');
-        </script>";
-    }
-}
-?>
-<!-- delete -->
-<?php
-if (isset($_POST['hapus'])) {
-    $id = $_POST['id'];
-    $hapus = mysqli_query($conn, "DELETE FROM kriteria WHERE id='$id'");
-    if ($hapus) {
-        echo "<script>document.location='criteriavalue.php'</script>";
-    } else {
-        echo "Pesan" . mysqli_error($conn);
-    }
-}
-?>

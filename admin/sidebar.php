@@ -29,14 +29,29 @@ $baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi1/admin';
             <span style="color: #fff">Daftar Anggota</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="criteriavalue.php">
+        <a class="nav-link" href="<?= $baseURL  ?>/tabel_anggota.php">
             <i class="fas fa-list-ul" style="color: #fff"></i>
-            <span style="color: #fff">Pinjaman</span></a>
+            <span style="color: #fff">Data Simpanan</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= $baseURL  ?>/tabel_anggota.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Angsuran Simpanan</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= $baseURL  ?>/tabel_anggota.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Data Pinjaman</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="criteriavalue.php">
             <i class="fas fa-list-ul" style="color: #fff"></i>
-            <span style="color: #fff">Simpanan</span></a>
+            <span style="color: #fff">Angsuran Pinjaman</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="criteriavalue.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Pencairan Pinjaman</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="criteriavalue.php">
