@@ -1,6 +1,5 @@
 <?php
-require_once("../koneksi/require.php");
-
+require_once("../../koneksi/require.php");
 ?>
 
 <!doctype html>
@@ -29,7 +28,7 @@ require_once("../koneksi/require.php");
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?php include('sidebar.php') ?>
+        <?php include('../sidebar.php') ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -39,7 +38,7 @@ require_once("../koneksi/require.php");
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include('topbar.php') ?>
+                <?php include('../topbar.php') ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -93,20 +92,24 @@ require_once("../koneksi/require.php");
                             <thead>
                                 <tr>
                                     <th scope="col">No. </th>
-                                    <th scope="col">Criteria</th>
+                                    <th scope="col">Nomor Anggota</th>
+                                    <th scope="col">Nama Anggota</th>
+                                    <th scope="col">tanggal_bergabung</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
 
                             <?php
-                            $sql = mysqli_query($conn, "SELECT * FROM kriteria");
+                            $sql = mysqli_query($conn, "SELECT * FROM anggota");
                             $no = 1;
                             while ($r = mysqli_fetch_assoc($sql)) {
                             ?>
                             <tr class="text-dark">
                                 <td class="text-center text-dark"><?= $no ?></td>
-                                <td class="text-dark"><?= $r['kriteria']; ?></td>
-                                <td class="text-dark"><a href="#" type="button" class="btn text-light"
+                                <td class="text-dark"><?= $r['id_anggota']; ?></td>
+                                <td class="text-dark"><?= $r['nama_anggota']; ?></td>
+                                <td class="text-dark"><?= $r['tanggal_bergabung']; ?></td>
+                                <!-- <td class="text-dark"><a href="#" type="button" class="btn text-light"
                                         style="background-color: #8B0000;" data-bs-toggle="modal"
                                         data-bs-target="#modalHapus<?php echo $r['id']; ?>">
                                         <i class="fas fa-trash"></i>
@@ -115,9 +118,9 @@ require_once("../koneksi/require.php");
                                         data-bs-toggle="modal" data-bs-target="#modalEdit<?php echo $r['id']; ?>">
                                         <i class="fas fa-pen"></i>
                                     </a>
-                                </td>
+                                </td> -->
                                 <!-- delete -->
-                                <div class="modal fade" id="modalHapus<?php echo $r['id']; ?>">
+                                <!-- <div class="modal fade" id="modalHapus<?php echo $r['id']; ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -141,11 +144,11 @@ require_once("../koneksi/require.php");
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
 
                                 <!-- edit -->
-                                <div class="modal fade" id="modalEdit<?php echo $r['id']; ?>">
+                                <!-- <div class="modal fade" id="modalEdit<?php echo $r['id']; ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -184,7 +187,7 @@ require_once("../koneksi/require.php");
                                             </form>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                     </div>
                     </tr>
                     <?php $no++;
@@ -199,7 +202,7 @@ require_once("../koneksi/require.php");
         </div>
         <!-- End of Main Content -->
 
-        <?php include('footer.php') ?>
+        <?php include('../footer.php') ?>
 
     </div>
     <!-- End of Content Wrapper -->
@@ -233,7 +236,7 @@ require_once("../koneksi/require.php");
         </div>
     </div>
 
-    <?php include('script-admin.php') ?>
+    <?php include('../script-admin.php') ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="

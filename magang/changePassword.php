@@ -71,7 +71,8 @@ $get = mysqli_fetch_assoc($user);
                                             value="<?= $get['level'] ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="password" class="col-form-label" style="color: #16161a">New
+                                                <label for="password" require class="col-form-label"
+                                                    style="color: #16161a">New
                                                     Password</label>
                                                 <input type="password" name="password" required class="form-control"
                                                     placeholder="Add Password">
@@ -79,7 +80,8 @@ $get = mysqli_fetch_assoc($user);
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="pw" class="col-form-label" style="color: #16161a">Confirm
+                                                <label for="pw" require class="col-form-label"
+                                                    style="color: #16161a">Confirm
                                                     Password
                                                 </label>
                                                 <input type="password" name="pw" required class="form-control"

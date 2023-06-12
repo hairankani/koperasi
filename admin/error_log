@@ -1,0 +1,193 @@
+[11-Oct-2022 09:17:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:17:24 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:17:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:17:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:18:17 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/scoringi/public_html/admin/tambahvalue.php on line 3
+[11-Oct-2022 09:18:17 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahvalue.php on line 4
+[11-Oct-2022 09:18:17 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahvalue.php on line 47
+[11-Oct-2022 09:18:17 UTC] PHP Notice:  Trying to get property 'error' of non-object in /home/scoringi/public_html/admin/tambahvalue.php on line 57
+[11-Oct-2022 09:18:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:19:50 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/scoringi/public_html/admin/tambahmagang.php on line 3
+[11-Oct-2022 09:19:50 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahmagang.php on line 4
+[11-Oct-2022 09:19:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahmagang.php on line 22
+[11-Oct-2022 09:21:52 UTC] PHP Notice:  Undefined index: image in /home/scoringi/public_html/admin/updateCompany.php on line 219
+[11-Oct-2022 09:21:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 219
+[11-Oct-2022 09:21:52 UTC] PHP Notice:  Undefined index: oldimage in /home/scoringi/public_html/admin/updateCompany.php on line 225
+[11-Oct-2022 09:26:56 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/scoringi/public_html/admin/tambahkriteria.php on line 3
+[11-Oct-2022 09:26:56 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahkriteria.php on line 4
+[11-Oct-2022 09:26:56 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahkriteria.php on line 11
+[11-Oct-2022 09:32:58 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:34:34 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:40:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:41:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:43:22 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:49:18 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:50:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:51:01 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/scoringi/public_html/admin/tambahvalue.php on line 3
+[11-Oct-2022 09:51:01 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahvalue.php on line 4
+[11-Oct-2022 09:51:01 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/tambahvalue.php on line 47
+[11-Oct-2022 09:51:01 UTC] PHP Notice:  Trying to get property 'error' of non-object in /home/scoringi/public_html/admin/tambahvalue.php on line 57
+[11-Oct-2022 09:51:48 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:51:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:52:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:55:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:55:20 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:20 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:27 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:27 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:29 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:29 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:31 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:31 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:32 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:34 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:34 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:38 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:44 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:44 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:47 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:47 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:50 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:55:58 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:55:58 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:56:17 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:56:17 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 183
+[11-Oct-2022 09:56:21 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:56:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:56:25 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:56:25 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:56:32 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:56:32 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:56:33 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:56:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:57:09 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:57:09 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:57:26 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:57:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:57:39 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:57:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:57:58 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:57:58 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:57:59 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:57:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:00 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:51 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:52 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:52 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:54 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:54 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:54 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:54 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:55 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:58:56 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 09:58:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:59:05 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 09:59:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 12:51:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 12:51:57 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 12:52:38 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 12:52:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 174
+[11-Oct-2022 12:52:41 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 12:52:41 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 174
+[11-Oct-2022 12:53:26 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 175
+[11-Oct-2022 12:54:07 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 12:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/internvalue.php on line 97
+[11-Oct-2022 12:54:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/scoringi/public_html/admin/internvalue.php on line 98
+[11-Oct-2022 12:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/internvalue.php on line 113
+[11-Oct-2022 12:54:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/scoringi/public_html/admin/internvalue.php on line 114
+[11-Oct-2022 12:54:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 12:54:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/scoringi/public_html/admin/internvalue.php on line 175
+[11-Oct-2022 12:55:00 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/internvalue.php on line 97
+[11-Oct-2022 12:55:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/scoringi/public_html/admin/internvalue.php on line 98
+[11-Oct-2022 12:55:00 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/internvalue.php on line 113
+[11-Oct-2022 12:55:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/scoringi/public_html/admin/internvalue.php on line 114
+[11-Oct-2022 12:55:00 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home/scoringi/public_html/admin/internvalue.php on line 173
+[11-Oct-2022 12:55:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/scoringi/public_html/admin/internvalue.php on line 175
+[11-Oct-2022 12:58:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 175
+[11-Oct-2022 12:58:46 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/internvalue.php on line 175
+[11-Oct-2022 16:14:06 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 16:14:06 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/index-admin.php on line 151
+[11-Oct-2022 16:14:08 UTC] PHP Notice:  Undefined index: username in /home/scoringi/public_html/admin/proseslogin.php on line 6
+[11-Oct-2022 16:14:08 UTC] PHP Notice:  Undefined index: password in /home/scoringi/public_html/admin/proseslogin.php on line 7
+[11-Oct-2022 16:15:33 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 16:16:07 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[11-Oct-2022 16:16:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/certificate1.php on line 84
+[11-Oct-2022 16:16:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/certificate1.php on line 86
+[11-Oct-2022 16:18:22 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 01:28:28 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 03:49:02 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 03:49:38 UTC] PHP Notice:  Undefined index: id in /home/scoringi/public_html/admin/changePassword.php on line 13
+[12-Oct-2022 03:49:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/changePassword.php on line 15
+[12-Oct-2022 03:49:38 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 03:49:38 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 65
+[12-Oct-2022 03:49:38 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 67
+[12-Oct-2022 03:49:38 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 69
+[12-Oct-2022 03:49:38 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 71
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Undefined index: id in /home/scoringi/public_html/admin/updateCompany.php on line 13
+[12-Oct-2022 03:49:42 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/updateCompany.php on line 15
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 81
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 87
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 95
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 103
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 112
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 120
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 128
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 136
+[12-Oct-2022 03:49:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 145
+[12-Oct-2022 03:50:14 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 04:47:11 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 04:47:11 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/index-admin.php on line 151
+[12-Oct-2022 08:08:44 UTC] PHP Notice:  Undefined index: image in /home/scoringi/public_html/admin/updateCompany.php on line 219
+[12-Oct-2022 08:08:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 219
+[12-Oct-2022 08:08:44 UTC] PHP Notice:  Undefined index: oldimage in /home/scoringi/public_html/admin/updateCompany.php on line 225
+[12-Oct-2022 16:40:51 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[12-Oct-2022 16:40:51 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/index-admin.php on line 151
+[13-Oct-2022 02:12:36 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[17-Oct-2022 02:16:33 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[20-Oct-2022 06:42:35 UTC] PHP Notice:  Undefined variable: predikat in /home/scoringi/public_html/admin/tambahvalue.php on line 45
+[03-Nov-2022 06:48:28 UTC] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home/scoringi/public_html/koneksi/db.php on line 8
+[01-Dec-2022 05:04:37 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Undefined index: id in /home/scoringi/public_html/admin/updateCompany.php on line 13
+[01-Dec-2022 05:04:43 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/updateCompany.php on line 15
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 81
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 87
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 95
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 103
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 112
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 120
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 128
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 136
+[01-Dec-2022 05:04:43 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/updateCompany.php on line 145
+[01-Dec-2022 05:04:49 UTC] PHP Notice:  Undefined index: id in /home/scoringi/public_html/admin/changePassword.php on line 13
+[01-Dec-2022 05:04:49 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/scoringi/public_html/admin/changePassword.php on line 15
+[01-Dec-2022 05:04:49 UTC] PHP Notice:  Undefined variable: username in /home/scoringi/public_html/admin/topbar.php on line 20
+[01-Dec-2022 05:04:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 65
+[01-Dec-2022 05:04:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 67
+[01-Dec-2022 05:04:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 69
+[01-Dec-2022 05:04:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/changePassword.php on line 71
+[15-Dec-2022 07:54:07 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/certificate1.php on line 84
+[15-Dec-2022 07:54:07 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/scoringi/public_html/admin/certificate1.php on line 86

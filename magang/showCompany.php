@@ -12,7 +12,6 @@ if(!isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     $id = $_SESSION['id'];
     $level = $_SESSION['level'];
-    var_dump($level);
     
 }
 $company = mysqli_query($conn, 'SELECT * FROM company');

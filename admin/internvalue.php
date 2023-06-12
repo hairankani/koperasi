@@ -16,7 +16,7 @@ require_once("../koneksi/require.php");
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="icon" href="../img/score.png">
 
-    <title>Criteria Value</title>
+    <title>Intern Value</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
@@ -168,7 +168,9 @@ require_once("../koneksi/require.php");
                                 </tr>
                             </thead>
                             <?php
-                            $sql = mysqli_query($conn, "SELECT nilai.*, magang.nama_magang, detailnilai.id iddetail, detailnilai.idNilai FROM magang INNER JOIN nilai ON magang.id = nilai.idMagang inner join detailnilai on nilai.id = detailNilai.idNilai");
+                           
+                            $sql = mysqli_query($conn, "SELECT nilai.*, magang.nama_magang, detailnilai.id iddetail, detailnilai.idNilai FROM magang INNER JOIN nilai ON magang.id = nilai.idMagang inner join detailnilai on nilai.id = detailnilai.idNilai");
+                        //   var_dump($conn); die();
                             $no = 1;
                             while ($r = mysqli_fetch_assoc($sql)) 
                             {
@@ -307,20 +309,15 @@ require_once("../koneksi/require.php");
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
                     },
+                     title: 'Hasil Penilaian Karyawan Magang PT. Visi Karya Prakarsa',
                     text: '<i class="fas fa-print"></i> Print'
-                },
-                {
-                    extend: 'excelHtml5',
-                    exportOptions: {
-                        columns: ':visible'
-                    },
-                    text: '<i class="fas fa-download"></i> Excel'
                 },
                 {
                     extend: 'pdfHtml5',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
                     },
+                     title: 'Hasil Penilaian Karyawan Magang PT. Visi Karya Prakarsa',
                     text: '<i class="fas fa-download"></i> PDF'
                 },
             ]

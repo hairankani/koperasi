@@ -1,6 +1,6 @@
 <?php
-$connection = mysqli_connect("localhost","root","");
-$db = mysqli_select_db($connection, 'db_penilaian');
+$connection = mysqli_connect("localhost","scoringi_nisa","Bep22nisa123");
+$db = mysqli_select_db($connection, 'scoringi_intern');
 
 if(isset($_POST['deletedata']))
 {

@@ -71,7 +71,8 @@ $get = mysqli_fetch_assoc($user);
                                             value="<?= $get['level'] ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="password" class="col-form-label" style="color: #16161a">New
+                                                <label for="password" require class="col-form-label"
+                                                    style="color: #16161a">New
                                                     Password</label>
                                                 <input type="password" name="password" class="form-control"
                                                     placeholder="Add Password">
@@ -79,7 +80,8 @@ $get = mysqli_fetch_assoc($user);
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="pw" class="col-form-label" style="color: #16161a">Confirm
+                                                <label for="pw" require class="col-form-label"
+                                                    style="color: #16161a">Confirm
                                                     Password
                                                 </label>
                                                 <input type="password" name="pw" class="form-control"
@@ -88,7 +90,7 @@ $get = mysqli_fetch_assoc($user);
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-magang.php" class="btn btn-md mt-4 mb-4"
+                                    <a href="index-admin.php" class="btn btn-md mt-4 mb-4"
                                         style="background-color: #D4C9D9; font-weight: bold; margin-right: 2%">Back</a>
                                     <button type="submit" name="changePassword" class="btn btn-md mt-4 mb-4"
                                         style="background-color: #F0C2A6; font-weight: bold; margin-right: 2%">Submit</button>

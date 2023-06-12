@@ -26,7 +26,7 @@ $no=1;
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="icon" href="../img/score.png">
 
-    <title>Criteria Value</title>
+    <title>Detail Intern Value</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
@@ -168,11 +168,11 @@ $no=1;
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="2" class="text-center">Nilai Rata Rata</td>
+                                    <td colspan="2" class="text-center">Average</td>
                                     <td><?= $result['rata_rata']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="text-center">Predikat</td>
+                                    <td colspan="2" class="text-center">Predicate</td>
                                     <td><?= $result['predikat']; ?></td>
                                 </tr>
                             </tfoot>
@@ -247,34 +247,25 @@ $no=1;
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
     <script>
-    // $(document).ready(function() {
+    $(document).ready(function() {
 
-    // $('#tableValue').DataTable({
-    // dom: 'Bfrtip',
-    // buttons: [{
-    //         extend: 'print',
-    //         exportOptions: {
-    //             columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    //         }
-    //     },
-    //     {
-    //         extend: 'excelHtml5',
-    //         exportOptions: {
-    //             columns: ':visible'
-    //         }
-    //     },
-    //     {
-    //         extend: 'pdfHtml5',
-    //         exportOptions: {
-    //             columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    //         }
-    //     },
-    // ]
-    // buttons: ['copy', 'print', 'pdf', 'colvis'],
+    $('#tableValue').DataTable({
+    dom: 'Bfrtip',
+    buttons: [
+        
+        {
+            extend: 'pdfHtml5',
+             title: 'Nilai Magang Hasil Praktek Kerja Lapangan PT. Visi Karya Prakarsa',
+            exportOptions: {
+                columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            }
+        },
+    ],
+    buttons: ['pdf'],
 
-    //     });
+        });
 
-    // });
+    });
     </script>
 
 </body>

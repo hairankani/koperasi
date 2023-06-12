@@ -1,3 +1,7 @@
+<?php 
+$baseURL = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+$baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi1/admin';
+?>
 <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #a4b1a0;" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -20,6 +24,26 @@
     </li>
     <hr class="sidebar-divider my-0">
     <li class="nav-item">
+        <a class="nav-link" href="<?= $baseURL  ?>/tabel_anggota.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Daftar Anggota</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="criteriavalue.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Pinjaman</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="criteriavalue.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Simpanan</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="criteriavalue.php">
+            <i class="fas fa-list-ul" style="color: #fff"></i>
+            <span style="color: #fff">Perhitungan SHU</span></a>
+    </li>
+    <!-- <li class="nav-item">
         <a class="nav-link" href="criteriavalue.php">
             <i class="fas fa-list-ul" style="color: #fff"></i>
             <span style="color: #fff">Criteria Value</span></a>
@@ -35,7 +59,7 @@
         <a class="nav-link" href="internvalue.php">
             <i class="fas fa-window-restore" style="color: #fff"></i>
             <span style="color: #fff">Intern Value</span></a>
-    </li>
+    </li> -->
     <hr class="sidebar-divider my-0">
     <!-- <li class="nav-item">
         <a class="nav-link" href="reportnilai.php">

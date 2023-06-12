@@ -15,6 +15,7 @@ $id = $_SESSION['id'];
     
 $detail = mysqli_query($conn, "SELECT nilai.id, nilai.rata_rata, nilai.predikat, magang.nama_magang, magang.instansi, detailnilai.* from magang inner join nilai on magang.id = nilai.idMagang inner join detailnilai on nilai.id = detailnilai.idNilai where magang.userId = $id");
                                 $result = mysqli_fetch_assoc($detail);
+                                //var_dump($result);
 
 
 $kriteria = mysqli_query($conn, "SELECT kriteria FROM kriteria");

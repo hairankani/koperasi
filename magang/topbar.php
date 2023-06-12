@@ -17,7 +17,7 @@ if(!isset($_SESSION['username'])){
     <!-- Topbar Search -->
     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-5 my-2 my-md-0 mw-100 navbar-search">
         <div class="input-group">
-            <h4 style="padding-top: 5px">Welcome, <?= $username; ?>!🙋🏻‍♀️</h4>
+            <h4 style="padding-top: 5px">Welcome, <?= $username; ?>!️</h4>
 
 
 

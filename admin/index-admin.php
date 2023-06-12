@@ -67,11 +67,7 @@ if(!isset($_SESSION['username'])){
                                             <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
                                                 Criteria Data</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <?php
-                                                    $kriteria = mysqli_query($conn,"SELECT * FROM kriteria");
-                                                    $jumlahKriteria = mysqli_num_rows($kriteria);
-                                                ?>
-                                                <?php echo "$jumlahKriteria" ?>
+
                                             </div>
                                         </div>
                                         <div class="col-auto">
@@ -91,11 +87,7 @@ if(!isset($_SESSION['username'])){
                                             <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
                                                 Intern Data</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <?php
-                                                    $magang = mysqli_query($conn,"SELECT * FROM magang");
-                                                    $jumlahMagang = mysqli_num_rows($magang);
-                                                ?>
-                                                <?php echo "$jumlahMagang" ?>
+
                                             </div>
                                         </div>
                                         <div class="col-auto">
@@ -117,11 +109,7 @@ if(!isset($_SESSION['username'])){
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                                                        <?php
-                                                    $nilai = mysqli_query($conn,"SELECT * FROM nilai");
-                                                    $jumlahNilai = mysqli_num_rows($nilai);
-                                                ?>
-                                                        <?php echo "$jumlahNilai" ?>
+
                                                     </div>
                                                 </div>
                                                 <div class="col">
