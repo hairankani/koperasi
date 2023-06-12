@@ -1,6 +1,6 @@
 <?php 
 $baseURL = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-$baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi1/admin';
+$baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi/admin';
 ?>
 <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #a4b1a0;" id="accordionSidebar">
 
@@ -29,7 +29,7 @@ $baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi1/admin';
             <span style="color: #fff">Daftar Anggota</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= $baseURL  ?>/tabel_anggota.php">
+        <a class="nav-link" href="<?= $baseURL  ?>/tabel_simpanan.php">
             <i class="fas fa-list-ul" style="color: #fff"></i>
             <span style="color: #fff">Data Simpanan</span></a>
     </li>
