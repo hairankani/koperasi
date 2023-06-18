@@ -92,26 +92,36 @@ if(!isset($_SESSION['username'])){
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <label for="no_hp" style="color: #fff">Nomor Handphone</label>
-                                            <input type="number" name="no_hp" class="form-control" required>
+                                            <div class="form-group">
+                                                <label for="no_hp" style="color: #fff">Nomor Handphone</label>
+                                                <input type="number" name="no_hp" class="form-control" required>
+                                            </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <label for="jk" style="color: #fff">Jenis Kelamin</label>
-                                            <select class="form-control" name="jk" id="id"
-                                                aria-label="Default select example" required>
-                                                <option selected>Pilih Jenis Kelamin</option>
-                                                <option value="Laki-Laki">Laki-Laki</option>
-                                                <option value="Perempuan">Perempuan</option>
-                                                </option>
-                                            </select>
+                                            <div class="form-group">
+                                                <label for="jk" style="color: #fff">Jenis Kelamin</label>
+                                                <select class="form-control" name="jk" id="id"
+                                                    aria-label="Default select example" required>
+                                                    <option selected>Pilih Jenis Kelamin</option>
+                                                    <option value="Laki-Laki">Laki-Laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
+                                                    </option>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
-                                            <label for="ttl">Tanggal Lahir</label>
-                                            <input type="date" name="ttl" class="form-control" required>
+                                            <div class="form-group">
+                                                <label for="ttl">Tanggal Lahir</label>
+                                                <input type="date" name="ttl" class="form-control" required>
+                                            </div>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
-                                            <label for="tanggal_bergabung">Tanggal Bergabung</label>
-                                            <input type="date" name="tanggal_bergabung" class="form-control" required>
+                                            <div class="form-group">
+                                                <label for="tanggal_bergabung">Tanggal Bergabung</label>
+                                                <input type="date" name="tanggal_bergabung" class="form-control"
+                                                    required>
+                                                </diuv>
+                                            </div>
                                         </div>
 
                                         <div class="d-flex justify-content-end">
@@ -168,6 +178,7 @@ if(!isset($_SESSION['username'])){
         </div>
 
         <?php include('script-admin.php') ?>
+
 </body>
 
 </html>
@@ -198,7 +209,7 @@ if(isset($_POST['tambahAnggota']))
 
         // Commit transaksi jika tidak ada kesalahan
         mysqli_commit($conn);
-
+        $_SESSION["sukses"] = 'Data Anggota Berhasil Ditambahkan';
         echo "<script type='text/javascript'>window.location.href='/koperasi/admin/tabel_anggota.php';</script>";
     } catch (Exception $e) {
         // Rollback transaksi jika terjadi kesalahan

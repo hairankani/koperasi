@@ -9,10 +9,9 @@ if(!isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     $id = $_SESSION['id'];
 }
-$getId = $_GET['id_simpanan'];
-$detail = mysqli_query($conn, "SELECT * from simpanan where id_simpanan = " . $getId);
+$getId = $_GET['id_anggota'];
+$detail = mysqli_query($conn, "SELECT * from anggota where id_anggota = " . $getId);
 $result = mysqli_fetch_assoc($detail);
-// var_dump($result['wajib_simpanan']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +69,7 @@ $result = mysqli_fetch_assoc($detail);
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;color: #000">Angsuran Simpanan</h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;color: #000">Data Anggota</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -79,73 +78,71 @@ $result = mysqli_fetch_assoc($detail);
                             <div class="card shadow h-100 py-2" style="background-color: #2A2024;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <form action="" method="POST" role="form text-left" enctype="multipart/form-data">
-                                        <input type="hidden" name="id_simpanan" class="form-control" required readonly
-                                            value="<?= $result['id_simpanan']; ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label style="color: #fff">Nama Anggota</label>
-
-                                                <?php
-                                                    $anggota = mysqli_query($conn, "SELECT simpanan.id_anggota, anggota.id_anggota, anggota.nama_anggota FROM simpanan INNER JOIN anggota ON simpanan.id_anggota = anggota.id_anggota where anggota.id_anggota = simpanan.id_anggota");
-                                                    while ($r = mysqli_fetch_assoc($anggota)) { 
-                                                        ?>
-                                                <input type="hidden" name="id_anggota" class="form-control" required
-                                                    readonly value="<?= $r['id_anggota']; ?>">
-                                                <input type="text" name="" class="form-control" required readonly
-                                                    value="<?= $r['nama_anggota']; ?>">
-                                                <?php
-                                                        }
-                                                        ?>
+                                                <label style="color: #fff">Nomor Anggota</label>
+                                                <input type="text" name="id_anggota" class="form-control" required
+                                                    value="<?= $result['id_anggota']; ?>" readonly>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="tanggal" require class="col-form-label"
-                                                    style="color: #fff">Tanggal Bayar
+                                                <label style="color: #fff">Nama Anggota</label>
+                                                <input type="text" name="nama_anggota" class="form-control" required
+                                                    value="<?= $result['nama_anggota']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="alamat" require class="col-form-label"
+                                                    style="color: #fff">Alamat
                                                 </label>
-                                                <input type="date" name="tanggal_bayar" class="form-control" required>
+                                                <textarea name="alamat" id="" cols="30" rows="10" class="form-control"
+                                                    required><?php echo $result['alamat'];?></textarea>
                                             </div>
                                         </div>
-
                                         <div class="col-md-12">
-                                            <label for="angsuran_wajib" style="color: #fff">Angsuran Wajib</label>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                                </div>
-                                                <input type="number" class="form-control" required
-                                                    placeholder="Input Angsuran Wajib" name="angsuran_wajib"
-                                                    aria-describedby="basic-addon1"
-                                                    value="<?= $result['wajib_simpanan']; ?>">
+                                            <div class="form-group">
+                                                <label for="no_hp" style="color: #fff">Nomor Handphone</label>
+                                                <input type="number" name="no_hp" class="form-control" required
+                                                    value="<?= $result['no_hp']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="jk" style="color: #fff">Jenis Kelamin</label>
+                                                <select class="form-control" name="jk" id="id"
+                                                    aria-label="Default select example" required>
+                                                    <option value="Laki-Laki"
+                                                        <?php echo ($result['jk'] == 'Laki-Laki') ? 'selected' : ''; ?>>
+                                                        Laki-Laki</option>
+                                                    <option value="Perempuan"
+                                                        <?php echo ($result['jk'] == 'Perempuan') ? 'selected' : ''; ?>>
+                                                        Perempuan</option>
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
-                                            <label for="angsuran_sukarela">Angsuran Sukarela</label>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                                </div>
-                                                <input type="number" class="form-control"
-                                                    placeholder="Input Angsuran Sukarela" name="angsuran_sukarela"
-                                                    aria-describedby="basic-addon1">
+                                            <div class="form-group">
+                                                <label for="ttl">Tanggal Lahir</label>
+                                                <input type="date" name="ttl" class="form-control" required
+                                                    value="<?= $result['ttl']; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
-                                            <label for="angsuran_swp">Angsuran Simpanan Wajib Pinjaman</label>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                                </div>
-                                                <input type="number" class="form-control"
-                                                    placeholder="Input Angsuran Simpanan Wajib Pinjaman"
-                                                    name="angsuran_swp" aria-describedby="basic-addon1">
+                                            <div class="form-group">
+                                                <label for="tanggal_bergabung">Tanggal Bergabung</label>
+                                                <input type="date" name="tanggal_bergabung" class="form-control"
+                                                    required value="<?= $result['tanggal_bergabung']; ?>">
+                                                </diuv>
                                             </div>
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
                                     <a href="tabel_simpanan.php" class="btn btn-md mt-4 mb-4"
                                         style="background-color: #FFF500; color: #000; font-weight: bold; margin-right: 2%">Back</a>
-                                    <button type="submit" name="updateSimpanan" class="btn btn-md mt-4 mb-4"
+                                    <button type="submit" name="updateAnggota" class="btn btn-md mt-4 mb-4"
                                         style="background-color: #00913E; color: #fff; font-weight: bold; margin-right: 2%">Submit</button>
                                 </div>
                             </div>
@@ -199,21 +196,23 @@ $result = mysqli_fetch_assoc($detail);
 
 </html>
 <?php 
-if(isset($_POST['updateSimpanan']))
+if(isset($_POST['updateAnggota']))
 {   
     
-    $id_simpanan = $_POST['id_simpanan'];
     $id_anggota = $_POST['id_anggota'];
-    $tanggal_bayar = $_POST['tanggal_bayar'];
-    $angsuran_wajib = $_POST['angsuran_wajib'];
-    $angsuran_sukarela = $_POST['angsuran_sukarela'] ? $_POST['angsuran_sukarela'] : 0;
-    $angsuran_swp = $_POST['angsuran_swp'] ? $_POST['angsuran_swp'] : 0;
-    $query = "INSERT INTO angsuran_simpanan (`id_simpanan`, `id_anggota`, `tanggal_bayar`, `angsuran_wajib`, `angsuran_sukarela`, `angsuran_swp`) VALUES ('$id_simpanan', '$id_anggota', '$tanggal_bayar', '$angsuran_wajib', '$angsuran_sukarela', '$angsuran_swp')";
+    $nama_anggota = $_POST['nama_anggota'];
+    $alamat = $_POST['alamat'];
+    $no_hp = $_POST['no_hp'];
+    $jk = $_POST['jk'];
+    $ttl = $_POST['ttl'];
+    $tanggal_bergabung = $_POST['tanggal_bergabung'];
+    $query = "UPDATE anggota set nama_anggota='$nama_anggota', alamat='$alamat', no_hp='$no_hp', jk='$jk', ttl='$ttl', tanggal_bergabung='$tanggal_bergabung' WHERE id_anggota='$id_anggota' ";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)
     {
-        echo "<script type='text/javascript'>window.location.href='/koperasi/admin/tabel_simpanan.php';</script>";
+        $_SESSION["sukses"] = 'Data Anggota Berhasil Diubah';
+        echo "<script type='text/javascript'>window.location.href='/koperasi/admin/tabel_anggota.php';</script>";
     }
     else
     {
