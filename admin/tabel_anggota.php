@@ -1,6 +1,6 @@
 <?php
 require_once("../koneksi/require.php");
-
+setlocale(LC_TIME, 'id_ID.utf8')
 ?>
 
 <!doctype html>
@@ -16,7 +16,7 @@ require_once("../koneksi/require.php");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Criteria Value</title>
+    <title>Koperasi</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
 
@@ -45,56 +45,29 @@ require_once("../koneksi/require.php");
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <h1 class="mt-5 text-center">Daftar Anggota</h1>
+                    <h1 class="mt-5 text-center" style="color: #000">Data Anggota</h1>
                     </br>
 
                     <!-- //add intern -->
-                    <p><a href="" data-bs-toggle="modal" data-bs-target="#modalTambah" type="button"
-                            class="btn text-light" style="background-color: #78938A;">
+                    <p><a href="create_anggota_baru.php" type="button" class="btn text-light"
+                            style="background-color: #00913E;">
                             <i class="fas fa-plus"></i>
-                            Add Criteria</a>
+                            Tambah Anggota Baru</a>
                     </p>
-                    <div class="modal fade" id="modalTambah" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Add Criteria Data</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <form action="tambahkriteria.php" method="POST">
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label>Criteria</label>
-                                            <input type="text" name="kriteria" required class="form-control"
-                                                placeholder="Input Criteria">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn"
-                                            style="background-color: #D4C9D9; font-weight: bold;"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" name="insertdatacriteria" class="btn"
-                                            style="background-color: #F0C2A6; font-weight: bold;">Save
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
 
 
 
 
-                    <!-- //table intern -->
+
+                    <!-- //table  -->
                     <div class="row">
-                        <table id="tableKriteria" class="table table-hover" style="background: #fff">
+                        <table id="tableSimpanan" class="table table-hover" style="background: #fff; color: #000">
                             <thead>
                                 <tr>
-                                    <th scope="col">No. </th>
+                                    <th scope="col" class="text-center">#</th>
                                     <th scope="col">Nomor Anggota</th>
-                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nama Anggota</th>
+                                    <th scope="col">No Handphone</th>
                                     <th scope="col">Tanggal Bergabung</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -102,15 +75,45 @@ require_once("../koneksi/require.php");
 
                             <?php
                             $sql = mysqli_query($conn, "SELECT * FROM anggota");
-                            
                             $no = 1;
                             while ($r = mysqli_fetch_assoc($sql)) {
+                               
+                              
                             ?>
-                            <tr class="text-dark">
-                                <td class="text-center text-dark"><?= $no ?></td>
-                                <td class="text-dark"><?= $r['id_anggota']; ?></td>
-                                <td class="text-dark"><?= $r['nama_anggota']; ?></td>
-                                <td class="text-dark"><?= $r['tanggal_bergabung']; ?></td>
+                            <tr class="" style="color: #000">
+                                <td class="text-center " style="color: #000"><?= $no ?></td>
+                                <td class="" style="color: #000">
+                                    <a href="detail_anggota.php?id_anggota=<?= $r['id_anggota']; ?>"
+                                        data-toggle="tooltip" title="Detail">
+                                        <?= $r['id_anggota']; ?>
+                                    </a>
+
+                                </td>
+
+                                <td class="" style="color: #000"><?= $r['nama_anggota']; ?></td>
+                                <td class="" style="color: #000"><?= $r['no_hp']; ?></td>
+                                <td class="" style="color: #000">
+                                    <?= date('d-m-Y', strtotime($r['tanggal_bergabung']));?></td>
+                                <td class="">
+                                    <a href="detail_anggota.php?id_anggota=<?= $r['id_anggota']; ?>" type="submit"
+                                        name="view" class="btn text-light"
+                                        style="background-color: #FFF300;color: #000000" data-toggle="tooltip"
+                                        title="Detail Anggota">
+                                        <i class="fas fa-eye" style="color: #000000"></i>
+                                    </a>
+                                    <!-- </form> -->
+                                    <a href="#" type="button" class="btn text-light" style="background-color: #8B0000;"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalHapus<?php echo $r['id_anggota']; ?>"
+                                        data-toggle="tooltip" title="Hapus Anggota">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                    <a href="#" type="button" class="btn text-light" style="background-color: #2A2024;"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalEdit<?php echo $r['id_anggota']; ?>">
+                                        <i class="fas fa-pen"></i>
+                                    </a>
+                                </td>
 
 
                     </div>
@@ -181,7 +184,7 @@ require_once("../koneksi/require.php");
     <script>
     $(document).ready(function() {
 
-        $('#tableKriteria').DataTable();
+        $('#tableSimpanan').DataTable();
 
     });
     </script>

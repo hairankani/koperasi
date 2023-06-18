@@ -70,20 +70,20 @@ $result = mysqli_fetch_assoc($detail);
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Angsuran Simpanan</h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;color: #000">Angsuran Simpanan</h1>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
+                            <div class="card shadow h-100 py-2" style="background-color: #2A2024;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <form action="" method="POST" role="form text-left" enctype="multipart/form-data">
                                         <input type="hidden" name="id_simpanan" class="form-control" required readonly
                                             value="<?= $result['id_simpanan']; ?>">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label style="color: #16161a">Nama Anggota</label>
+                                                <label style="color: #fff">Nama Anggota</label>
 
                                                 <?php
                                                     $anggota = mysqli_query($conn, "SELECT simpanan.id_anggota, anggota.id_anggota, anggota.nama_anggota FROM simpanan INNER JOIN anggota ON simpanan.id_anggota = anggota.id_anggota where anggota.id_anggota = simpanan.id_anggota");
@@ -101,14 +101,14 @@ $result = mysqli_fetch_assoc($detail);
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="tanggal" require class="col-form-label"
-                                                    style="color: #16161a">Tanggal Bayar
+                                                    style="color: #fff">Tanggal Bayar
                                                 </label>
                                                 <input type="date" name="tanggal_bayar" class="form-control" required>
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
-                                            <label for="angsuran_wajib" style="color: #16161a">Angsuran Wajib</label>
+                                            <label for="angsuran_wajib" style="color: #fff">Angsuran Wajib</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -119,7 +119,7 @@ $result = mysqli_fetch_assoc($detail);
                                                     value="<?= $result['wajib_simpanan']; ?>">
                                             </div>
                                         </div>
-                                        <div class="col-md-12" style="color: #16161a">
+                                        <div class="col-md-12" style="color: #fff">
                                             <label for="angsuran_sukarela">Angsuran Sukarela</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -130,7 +130,7 @@ $result = mysqli_fetch_assoc($detail);
                                                     aria-describedby="basic-addon1">
                                             </div>
                                         </div>
-                                        <div class="col-md-12" style="color: #16161a">
+                                        <div class="col-md-12" style="color: #fff">
                                             <label for="angsuran_swp">Angsuran Simpanan Wajib Pinjaman</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -143,10 +143,10 @@ $result = mysqli_fetch_assoc($detail);
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-admin.php" class="btn btn-md mt-4 mb-4"
-                                        style="background-color: #D4C9D9; font-weight: bold; margin-right: 2%">Back</a>
+                                    <a href="tabel_simpanan.php" class="btn btn-md mt-4 mb-4"
+                                        style="background-color: #FFF500; color: #000; font-weight: bold; margin-right: 2%">Back</a>
                                     <button type="submit" name="updateSimpanan" class="btn btn-md mt-4 mb-4"
-                                        style="background-color: #F0C2A6; font-weight: bold; margin-right: 2%">Submit</button>
+                                        style="background-color: #00913E; color: #fff; font-weight: bold; margin-right: 2%">Submit</button>
                                 </div>
                             </div>
 

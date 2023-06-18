@@ -67,18 +67,18 @@ if(!isset($_SESSION['username'])){
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center;">Tambah Data Simpanan Baru</h1>
+                        <h1 class="h3 mb-0 " style="text-align: center; color: #000">Tambah Data Simpanan Baru</h1>
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
+                            <div class="card shadow h-100 py-2" style="background-color: #2A2024;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <form action="" method="POST" role="form text-left" enctype="multipart/form-data">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label style="color: #16161a">Name Anggota</label>
+                                                <label style="color: #fff">Nama Anggota</label>
                                                 <select class="form-control" name="id_anggota" id="id"
                                                     aria-label="Default select example" required>
                                                     <option selected>Pilih Anggota</option>
@@ -98,13 +98,13 @@ if(!isset($_SESSION['username'])){
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="tanggal" require class="col-form-label"
-                                                    style="color: #16161a">Tanggal Mulai
+                                                    style="color: #fff">Tanggal Mulai
                                                 </label>
                                                 <input type="date" name="tanggal_mulai" class="form-control" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <label for="pokok_simpanan" style="color: #16161a">Simpanan Pokok</label>
+                                            <label for="pokok_simpanan" style="color: #fff">Simpanan Pokok</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -115,7 +115,7 @@ if(!isset($_SESSION['username'])){
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <label for="wajib_simpanan" style="color: #16161a">Simpanan Wajib</label>
+                                            <label for="wajib_simpanan" style="color: #fff">Simpanan Wajib</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-addon1">Rp. </span>
@@ -125,7 +125,7 @@ if(!isset($_SESSION['username'])){
                                                     aria-describedby="basic-addon1">
                                             </div>
                                         </div>
-                                        <div class="col-md-12" style="color: #16161a">
+                                        <div class="col-md-12" style="color: #fff">
                                             <label for="sukarela_simpanan">Simpanan Sukarela</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -136,7 +136,7 @@ if(!isset($_SESSION['username'])){
                                                     aria-describedby="basic-addon1">
                                             </div>
                                         </div>
-                                        <div class="col-md-12" style="color: #16161a">
+                                        <div class="col-md-12" style="color: #fff">
                                             <label for="swp_simpanan">Simpanan Wajib Pinjaman</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
@@ -149,10 +149,10 @@ if(!isset($_SESSION['username'])){
                                         </div>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <a href="index-admin.php" class="btn btn-md mt-4 mb-4"
-                                        style="background-color: #D4C9D9; font-weight: bold; margin-right: 2%">Back</a>
+                                    <a href="tabel_simpanan.php" class="btn btn-md mt-4 mb-4"
+                                        style="background-color: #FFF500; color: #000; font-weight: bold; margin-right: 2%">Back</a>
                                     <button type="submit" name="tambahSimpanan" class="btn btn-md mt-4 mb-4"
-                                        style="background-color: #F0C2A6; font-weight: bold; margin-right: 2%">Submit</button>
+                                        style="background-color: #00913E; color: #fff; font-weight: bold; margin-right: 2%">Submit</button>
                                 </div>
                             </div>
 

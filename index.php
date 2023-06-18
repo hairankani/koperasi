@@ -14,7 +14,7 @@ include 'koneksi/db.php';
     <meta name="author" content="">
     <link rel="icon" href="img/score.png">
 
-    <title>SPK Intern - Login</title>
+    <title>Koperasi - Login</title>
     <link rel="stylesheet" href="admin/style.css">
     <style>
     .bg {
@@ -96,32 +96,29 @@ include 'koneksi/db.php';
                                     <div class="col-lg-6">
                                         <div class="p-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 mb-4"> <b> Welcome to Scoring
-                                                        System!🖐🏻</b>
+                                                <h1 class="h4 text-gray-900 mb-4"> <b> Silahkan Login</b>
                                                 </h1>
-                                                <h1 class="h4 text-gray-900 mb-4">Sign in now
                                                 </h1>
                                             </div>
                                             <form class="user" method="POST" action="admin/proseslogin.php">
                                                 <div class="form-group">
                                                     <input type="text" name="username" required
-                                                        class="form-control form-control-user"
-                                                        placeholder="Input Username">
+                                                        class="form-control form-control-user" placeholder="Username">
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="password" name="password" required
                                                         class="form-control form-control-user" id="exampleInputPassword"
-                                                        placeholder="Input Password">
+                                                        placeholder="Password">
                                                 </div>
-                                                <div class="form-group">
-                                                    <!-- <div class="custom-control custom-checkbox small">
+                                                <!-- <div class="form-group"> -->
+                                                <!-- <div class="custom-control custom-checkbox small">
                                                     <input type="checkbox" class="custom-control-input" id="customCheck">
                                                     <label class="custom-control-label" for="customCheck">Remember
                                                         Me</label>
                                                 </div> -->
-                                                </div>
-                                                <button type="submit" class="btn btn text-light btn-user btn-block"
-                                                    style="background-color: #A2B5BB;">
+                                                <!-- </div> -->
+                                                <button type="submit" class="btn btn-user btn-block"
+                                                    style="background-color: #A2B5BB;; color: #000">
                                                     Login
                                                 </button>
 

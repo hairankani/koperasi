@@ -14,7 +14,7 @@ include 'koneksi/db.php';
     <meta name="author" content="">
     <link rel="icon" href="img/score.png">
 
-    <title>SPK Intern - Login</title>
+    <title>Koperasi - Login</title>
     <link rel="stylesheet" href="admin/style.css">
     <style>
     .bg {
@@ -96,10 +96,9 @@ include 'koneksi/db.php';
                                     <div class="col-lg-6">
                                         <div class="p-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 mb-4"> <b> Welcome to Scoring
-                                                        System!🖐🏻</b>
+                                                <h1 class="h4 text-gray-900 mb-4"> <b> Silahkan Login</b>
                                                 </h1>
-                                                <h1 class="h4 text-gray-900 mb-4">Sign in now
+                                                <!-- <h1 clas="h4 text-gray-900 mb-4">Sign in now -->
                                                 </h1>
                                             </div>
                                             <form class="user" method="POST" action="admin/proseslogin.php">

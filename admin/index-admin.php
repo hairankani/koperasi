@@ -60,12 +60,12 @@ if(!isset($_SESSION['username'])){
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2" style="background-color: #ADC5B6;">
+                            <div class="card shadow h-100 py-2" style="background-color: #FCF600;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
-                                                Criteria Data</div>
+                                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                                                Data Anggota</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                             </div>
@@ -80,12 +80,12 @@ if(!isset($_SESSION['username'])){
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
+                            <div class="card shadow h-100 py-2" style="background-color: #FCF600;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
-                                                Intern Data</div>
+                                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                                                Total Pinjaman</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
 
                                             </div>
@@ -100,12 +100,12 @@ if(!isset($_SESSION['username'])){
 
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card shadow h-100 py-2" style="background-color: #ECB390;">
+                            <div class="card shadow h-100 py-2" style="background-color: #FCF600    ;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
-                                                Value Report</div>
+                                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                                                Total Simpanan</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
@@ -128,7 +128,7 @@ if(!isset($_SESSION['username'])){
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-12">
+                        <!-- <div class="col-lg-12">
                             <div class="card shadow h-100 py-2" style="background-color: #A5C9CA;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <div class="row no-gutters align-items-center">
@@ -146,7 +146,7 @@ if(!isset($_SESSION['username'])){
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
 

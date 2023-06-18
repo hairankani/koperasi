@@ -2,7 +2,7 @@
    <footer class="sticky-footer" style="background-color: #F8F9FC;">
        <div class="container my-auto">
            <div class="copyright text-center my-auto">
-               <span>Copyright &copy; Khoirunisa Mujahidah 2022</span>
+               <span>Copyright &copy; Raden Azriel 2023</span>
            </div>
        </div>
    </footer>

@@ -2,15 +2,15 @@
 $baseURL = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
 $baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi/admin';
 ?>
-<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #a4b1a0;" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #00913E;" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
             <!-- <i class="fa fa-building"></i> -->
-            <img src="../img/logo-antrique.png" width="100">
+            <!-- <img src="../img/logo-antrique.png" width="100"> -->
         </div>
-        <div class="sidebar-brand-text mx-3">SP<sup>intern</sup></div>
+        <div class="    sidebar-brand-text mx-3">KOPERASI</div>
     </a>
 
     <!-- Divider -->

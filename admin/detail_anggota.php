@@ -13,7 +13,7 @@ FROM angsuran_simpanan
 LEFT JOIN anggota ON angsuran_simpanan.id_anggota = anggota.id_anggota 
 WHERE anggota.id_anggota = " . $id_anggota;
 $resultdetail = mysqli_query($conn, $detail);
-// var_dump($resultdetail);
+// var_dump($detail);
 // $no=1;
 
 ?>
