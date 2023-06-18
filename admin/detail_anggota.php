@@ -75,7 +75,7 @@ $id_anggota = $_GET['id_anggota'];
                     <!-- //add intern -->
                     <div class="row">
                         <div class="col-lg-2">
-                            <p><a href="tabel_anggota.php" type="button" class="btn"
+                            <p><a onclick="history.back(-1)" type="button" class="btn"
                                     style="background-color: #FFF402; font-weight: bold; color: #000">Back</a>
 
                             </p>
@@ -120,7 +120,7 @@ $id_anggota = $_GET['id_anggota'];
                                 <tr>
                                     <td style="color: #000;">Tanggal Lahir</td>
                                     <td style="color: #000;">:</td>
-                                    <td style="color: #000;"><?= $result['ttl']; ?></td>
+                                    <td style="color: #000;"><?= $result['tanggal_lahir']; ?></td>
                                 </tr>
                             </table>
                         </div>

@@ -125,9 +125,9 @@ $result = mysqli_fetch_assoc($detail);
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
                                             <div class="form-group">
-                                                <label for="ttl">Tanggal Lahir</label>
-                                                <input type="date" name="ttl" class="form-control" required
-                                                    value="<?= $result['ttl']; ?>">
+                                                <label for="tanggal_lahir">Tanggal Lahir</label>
+                                                <input type="date" name="tanggal_lahir" class="form-control" required
+                                                    value="<?= $result['tanggal_lahir']; ?>">
                                             </div>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
@@ -204,9 +204,9 @@ if(isset($_POST['updateAnggota']))
     $alamat = $_POST['alamat'];
     $no_hp = $_POST['no_hp'];
     $jk = $_POST['jk'];
-    $ttl = $_POST['ttl'];
+    $tanggal_lahir = $_POST['tanggal_lahir'];
     $tanggal_bergabung = $_POST['tanggal_bergabung'];
-    $query = "UPDATE anggota set nama_anggota='$nama_anggota', alamat='$alamat', no_hp='$no_hp', jk='$jk', ttl='$ttl', tanggal_bergabung='$tanggal_bergabung' WHERE id_anggota='$id_anggota' ";
+    $query = "UPDATE anggota set nama_anggota='$nama_anggota', alamat='$alamat', no_hp='$no_hp', jk='$jk', tanggal_lahir='$tanggal_lahir', tanggal_bergabung='$tanggal_bergabung' WHERE id_anggota='$id_anggota' ";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)

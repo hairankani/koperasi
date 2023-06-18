@@ -111,8 +111,8 @@ if(!isset($_SESSION['username'])){
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
                                             <div class="form-group">
-                                                <label for="ttl">Tanggal Lahir</label>
-                                                <input type="date" name="ttl" class="form-control" required>
+                                                <label for="tanggal_lahir">Tanggal Lahir</label>
+                                                <input type="date" name="tanggal_lahir" class="form-control" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
@@ -190,20 +190,17 @@ if(isset($_POST['tambahAnggota']))
     $alamat = $_POST['alamat'];
     $no_hp = $_POST['no_hp'];
     $jk = $_POST['jk'];
-    $ttl = $_POST['ttl'];
+    $tanggal_lahir = $_POST['tanggal_lahir'];
     $tanggal_bergabung = $_POST['tanggal_bergabung'];
 
     mysqli_begin_transaction($conn);
 
     try {
         // Insert data ke tabel simpanan
-        $query = "SELECT GenerateAutoIncrement() AS newId";
-        $result = mysqli_query($conn, $query);
-        $row = mysqli_fetch_assoc($result);
-        $newId = $row['newId'];
-        $query1 ="INSERT INTO anggota (`id_anggota`,
-        `nama_anggota`,`alamat`,`no_hp`,`jk`,`ttl`, `tanggal_bergabung`) VALUES ('$newId',
-        '$nama_anggota', '$alamat','$no_hp', '$jk', '$ttl', '$tanggal_bergabung')";
+     
+        $query1 ="INSERT INTO anggota (
+        `nama_anggota`,`alamat`,`no_hp`,`jk`,`tanggal_lahir`, `tanggal_bergabung`) VALUES (
+        '$nama_anggota', '$alamat','$no_hp', '$jk', '$tanggal_lahir', '$tanggal_bergabung')";
         mysqli_query($conn, $query1);
 
 

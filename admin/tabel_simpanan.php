@@ -119,7 +119,31 @@ setlocale(LC_TIME, 'id_ID.utf8')
 
                     </div>
                     </tr>
-
+                    <div class="modal fade" id="modalHapus<?php echo $r['id_simpanan']; ?>">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Hapus Anggota<h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post">
+                                        <input type="hidden" name="id_simpanan" value="<?= $r['id_simpanan']; ?>">
+                                        Apakah kamu yakin menghapus simpanan ini?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn"
+                                        style="background-color: #2A2024; font-weight: bold; color: #fff"
+                                        data-bs-dismiss="modal">Tidak</button>
+                                    <button type="submit" class="btn"
+                                        style="background-color: #8B0000; font-weight: bold; color: #fff"
+                                        name="hapus">Ya</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php $no++;
                             } ?>
                     </table>
@@ -189,7 +213,29 @@ setlocale(LC_TIME, 'id_ID.utf8')
 
     });
     </script>
+    <script>
+    <?php if($_SESSION['sukses']){ ?>
+    Swal.fire({
+        title: 'Sukses',
+        text: '<?php echo $_SESSION['sukses']; ?>',
+        icon: 'success',
+    })
+    <?php unset($_SESSION['sukses']); } ?>
+    </script>
 
 </body>
 
 </html>
+<!-- delete -->
+<?php
+if (isset($_POST['hapus'])) {
+    $id_simpanan = $_POST['id_simpanan'];
+    $hapus = mysqli_query($conn, "DELETE FROM simpanan WHERE id_simpanan='$id_simpanan'");
+    if ($hapus) {
+        $_SESSION["sukses"] = 'Data Simpanan Berhasil Dihapus';
+        echo "<script>document.location='tabel_simpanan.php'</script>";
+    } else {
+        echo "Pesan" . mysqli_error($conn);
+    }
+}
+?>

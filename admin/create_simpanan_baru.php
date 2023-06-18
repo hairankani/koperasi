@@ -219,9 +219,8 @@ if(isset($_POST['tambahSimpanan']))
 
     try {
         // Insert data ke tabel simpanan
-        $query1 ="INSERT INTO simpanan (`id_anggota`,
-        `tanggal_mulai`,`pokok_simpanan`,`wajib_simpanan`,`sukarela_simpanan`,`swp_simpanan`) VALUES ('$id_anggota',
-        '$tanggal_mulai', '$pokok_simpanan','$wajib_simpanan', '$sukarela_simpanan', '$swp_simpanan')";
+        $query1 = "INSERT INTO simpanan (id_anggota, tanggal_mulai, pokok_simpanan, wajib_simpanan, sukarela_simpanan, swp_simpanan) VALUES ('$id_anggota', '$tanggal_mulai', '$pokok_simpanan', '$wajib_simpanan', '$sukarela_simpanan', '$swp_simpanan')";
+        // die($query1);
         mysqli_query($conn, $query1);
 
         // Mendapatkan id_simpanan yang baru saja di-insert
@@ -231,15 +230,15 @@ if(isset($_POST['tambahSimpanan']))
         $query2 = "INSERT INTO angsuran_simpanan (`id_simpanan`, `id_anggota`, `tanggal_bayar`, `angsuran_wajib`, `angsuran_sukarela`, `angsuran_swp`) VALUES ('$id_simpanan', '$id_anggota', '$tanggal_mulai', '$wajib_simpanan', '$sukarela_simpanan', '$swp_simpanan')";
         mysqli_query($conn, $query2);
 
-        // Commit transaksi jika tidak ada kesalahan
+        // // Commit transaksi jika tidak ada kesalahan
         mysqli_commit($conn);
-
+        $_SESSION["sukses"] = 'Simpanan Baru Berhasil Ditambahkan';
         echo "<script type='text/javascript'>window.location.href='/koperasi/admin/tabel_simpanan.php';</script>";
     } catch (Exception $e) {
         // Rollback transaksi jika terjadi kesalahan
         mysqli_rollback($conn);
 
-        echo "<script>alert('" . $e->getMessage() . "');</script>";
+        echo $e->getMessage();
 }
 
 

@@ -86,7 +86,7 @@ $result = mysqli_fetch_assoc($detail);
                                                 <label style="color: #fff">Nama Anggota</label>
 
                                                 <?php
-                                                    $anggota = mysqli_query($conn, "SELECT simpanan.id_anggota, anggota.id_anggota, anggota.nama_anggota FROM simpanan INNER JOIN anggota ON simpanan.id_anggota = anggota.id_anggota where anggota.id_anggota = simpanan.id_anggota");
+                                                    $anggota = mysqli_query($conn, "SELECT simpanan.id_anggota, anggota.id_anggota, anggota.nama_anggota FROM simpanan INNER JOIN anggota ON simpanan.id_anggota = anggota.id_anggota where simpanan.id_simpanan = " . $result['id_simpanan']);
                                                     while ($r = mysqli_fetch_assoc($anggota)) { 
                                                         ?>
                                                 <input type="hidden" name="id_anggota" class="form-control" required
