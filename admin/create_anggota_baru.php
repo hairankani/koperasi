@@ -106,6 +106,10 @@ if(!isset($_SESSION['username'])){
                                             </select>
                                         </div>
                                         <div class="col-md-12" style="color: #fff">
+                                            <label for="ttl">Tanggal Lahir</label>
+                                            <input type="date" name="ttl" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-12" style="color: #fff">
                                             <label for="tanggal_bergabung">Tanggal Bergabung</label>
                                             <input type="date" name="tanggal_bergabung" class="form-control" required>
                                         </div>
@@ -175,6 +179,7 @@ if(isset($_POST['tambahAnggota']))
     $alamat = $_POST['alamat'];
     $no_hp = $_POST['no_hp'];
     $jk = $_POST['jk'];
+    $ttl = $_POST['ttl'];
     $tanggal_bergabung = $_POST['tanggal_bergabung'];
 
     mysqli_begin_transaction($conn);
@@ -186,8 +191,8 @@ if(isset($_POST['tambahAnggota']))
         $row = mysqli_fetch_assoc($result);
         $newId = $row['newId'];
         $query1 ="INSERT INTO anggota (`id_anggota`,
-        `nama_anggota`,`alamat`,`no_hp`,`jk`,`tanggal_bergabung`) VALUES ('$newId',
-        '$nama_anggota', '$alamat','$no_hp', '$jk', '$tanggal_bergabung')";
+        `nama_anggota`,`alamat`,`no_hp`,`jk`,`ttl`, `tanggal_bergabung`) VALUES ('$newId',
+        '$nama_anggota', '$alamat','$no_hp', '$jk', '$ttl', '$tanggal_bergabung')";
         mysqli_query($conn, $query1);
 
 

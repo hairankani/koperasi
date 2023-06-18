@@ -4,15 +4,22 @@ $id_anggota = $_GET['id_anggota'];
 
     
     $detail = mysqli_query($conn, "SELECT simpanan.*, anggota.* FROM simpanan left JOIN anggota ON simpanan.id_anggota = anggota.id_anggota where anggota.id_anggota = " . $id_anggota);
+
     $result = mysqli_fetch_assoc($detail);
-    // var_dump($result);
+    if ($result == null) {
+        $detail = mysqli_query($conn, "SELECT * FROM anggota WHERE anggota.id_anggota = " . $id_anggota);
+        $result = mysqli_fetch_assoc($detail);
+    } else {
+        
+    }
 
 
-$detail ="SELECT angsuran_simpanan.*, anggota.id_anggota 
-FROM angsuran_simpanan 
-LEFT JOIN anggota ON angsuran_simpanan.id_anggota = anggota.id_anggota 
-WHERE anggota.id_anggota = " . $id_anggota;
-$resultdetail = mysqli_query($conn, $detail);
+    $detail ="SELECT angsuran_simpanan.*, anggota.id_anggota 
+    FROM angsuran_simpanan 
+    LEFT JOIN anggota ON angsuran_simpanan.id_anggota = anggota.id_anggota 
+    WHERE anggota.id_anggota = " . $id_anggota;
+    $resultdetail = mysqli_query($conn, $detail);
+
 // var_dump($detail);
 // $no=1;
 
@@ -62,14 +69,14 @@ $resultdetail = mysqli_query($conn, $detail);
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <h1 class="mt-5 text-center">Report Anggota</h1>
+                    <h1 class="mt-5 text-center" style="color: #000">Report Anggota</h1>
                     </br>
 
                     <!-- //add intern -->
                     <div class="row">
                         <div class="col-lg-2">
-                            <p><a href="internvalue.php" type="button" class="btn"
-                                    style="background-color: #D4C9D9; font-weight: bold;">Back</a>
+                            <p><a href="tabel_anggota.php" type="button" class="btn"
+                                    style="background-color: #FFF402; font-weight: bold; color: #000">Back</a>
 
                             </p>
                         </div>
@@ -80,62 +87,60 @@ $resultdetail = mysqli_query($conn, $detail);
 
 
 
-                    <div class="card mb-3" style="width: 100%;">
+                    <div class="card mb-3" style="width: 100%; border-color: #FFF402">
 
                         <div class="card-body">
-                            <h4>Data anggota</h4>
+                            <h4 style="color: #000;">Data anggota</h4>
                             <table cellpadding="5" class="biodata" id="biodata">
                                 <tr>
-                                    <td>Name</td>
-                                    <td>:</td>
-                                    <td><?= $result['nama_anggota']; ?></td>
+                                    <td style="color: #000;">Nama</td>
+                                    <td style="color: #000;">:</td>
+                                    <td style="color: #000;"><?= $result['nama_anggota']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Tanggal Bergabung</td>
-                                    <td>:</td>
-                                    <td><?= $result['tanggal_bergabung']; ?></td>
+                                    <td style="color: #000;">Tanggal Bergabung</td>
+                                    <td style="color: #000;">:</td>
+                                    <td style="color: #000;"><?= $result['tanggal_bergabung']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Alamat</td>
-                                    <td>:</td>
-                                    <td><?= $result['alamat']; ?></td>
+                                    <td style="color: #000;">Alamat</td>
+                                    <td style="color: #000;">:</td>
+                                    <td style="color: #000;"><?= $result['alamat']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>No Handphone</td>
-                                    <td>:</td>
-                                    <td><?= $result['no_hp']; ?></td>
+                                    <td style="color: #000;">No Handphone</td>
+                                    <td style="color: #000;">:</td>
+                                    <td style="color: #000;"><?= $result['no_hp']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Jenis Kelamin</td>
-                                    <td>:</td>
-                                    <td><?= $result['jk']; ?></td>
+                                    <td style="color: #000;">Jenis Kelamin</td>
+                                    <td style="color: #000;">:</td>
+                                    <td style="color: #000;"><?= $result['jk']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td>Tanggal Lahir</td>
-                                    <td>:</td>
-                                    <td><?= $result['ttl']; ?></td>
+                                    <td style="color: #000;">Tanggal Lahir</td>
+                                    <td style="color: #000;">:</td>
+                                    <td style="color: #000;"><?= $result['ttl']; ?></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-                    <!-- //table intern -->
-                    <div class="row">
-                        <table id="tableValue" class="table table-hover" style="background: #fff" border="1">
-                            <thead>
-                                <tr>
-                                    <th colspan="5" class="text-center">Simpanan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>Tanggal</th>
-
-                                    <th>Wajib</th>
-                                    <th>Sukarela</th>
-                                    <th>SWP</th>
-                                </tr>
-                                <tr>
-                                    <?php 
+                    <!-- //table simpanan -->
+                    <div class="tampilkanSimpanan" style="background: #FFF402;padding: 15px;border-radius: 15px;">
+                        <h3 class="text-center" style="color: #000;">Histori Simpanan</h3>
+                        <div class="row">
+                            <table id="tableSimpanan" class="table table-hover" style="background: #fff" border="1">
+                                <thead>
+                                    <tr>
+                                        <th style="color: #000;">Tanggal</th>
+                                        <th style="color: #000;">Wajib</th>
+                                        <th style="color: #000;">Sukarela</th>
+                                        <th style="color: #000;">SWP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <?php 
                                     $totalWajib = 0;
                                     $totalSukarela = 0;
                                     $totalSwp = 0;
@@ -144,33 +149,98 @@ $resultdetail = mysqli_query($conn, $detail);
                                         $totalSukarela += $r['angsuran_sukarela']; 
                                         $totalSwp += $r['angsuran_swp']; 
                                         ?>
-                                    <td><?= $r['tanggal_bayar'] ; ?></td>
-                                    <td><?= $r['angsuran_wajib']; ?></td>
-                                    <td><?= $r['angsuran_sukarela']; ?></td>
-                                    <td><?= $r['angsuran_swp']; ?></td>
-                                </tr>
-                                <?php } ?>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Pokok: <?= $result['pokok_simpanan']; ?></th>
-                                    <th>Total Wajib: <?= $totalWajib; ?></th>
-                                    <th>Total Sukarela: <?= $totalSukarela; ?></th>
-                                    <th>Total SWP: <?= $totalSwp; ?></th>
-                                </tr>
+                                        <td style="color: #000;">
+                                            <?= $r['tanggal_bayar'] ? date('d-m-Y', strtotime($r['tanggal_bayar'])) : '-' ; ?>
+                                        </td>
+                                        <td style="color: #000;">
+                                            <?= $r['angsuran_wajib'] ? $r['angsuran_wajib'] : 0; ?></td>
+                                        <td style="color: #000;">
+                                            <?= $r['angsuran_sukarela'] ? $r['angsuran_sukarela'] : 0; ?></td>
+                                        <td style="color: #000;"><?= $r['angsuran_swp'] ? $r['angsuran_swp'] : 0; ?>
+                                        </td>
+                                    </tr>
+                                    <?php } ?>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th style="color: #000;">Pokok:
+                                            <?= (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) ;  ?>
+                                        </th>
+                                        <th style="color: #000;">Total Wajib: <?= $totalWajib; ?></th>
+                                        <th style="color: #000;">Total Sukarela: <?= $totalSukarela; ?></th>
+                                        <th style="color: #000;">Total SWP: <?= $totalSwp; ?></th>
+                                    </tr>
 
-                                <tr>
-                                    <td></td>
-                                    <th colspan="2" class="text-right">Total Simpanan</th>
-                                    <th><?= $result['pokok_simpanan'] + $totalWajib + $totalSukarela + $totalSwp ?></th>
-                                </tr>
+                                    <tr>
+                                        <td></td>
+                                        <th colspan="2" class="text-right" style="color: #000;">Total Simpanan</th>
+                                        <th style="color: #000;">
+                                            <?= $totalSimpanan = (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) + $totalWajib + $totalSukarela + $totalSwp ?>
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
 
-                            </tfoot>
+                    <!-- table angsuran pinjaman -->
+                    <!-- //table simpanan -->
+                    <br>
+                    <div class="tampilkanSimpanan" style="background: #FFF402;padding: 15px;border-radius: 15px;">
+                        <h3 class="text-center" style="color: #000;">Histori Angsuran Pinjaman</h3>
+                        <div class="row">
+                            <table id="tableSimpanan" class="table table-hover" style="background: #fff" border="1">
+                                <thead>
+                                    <tr>
+                                        <th style="color: #000;">Tanggal</th>
+                                        <th style="color: #000;">Wajib</th>
+                                        <th style="color: #000;">Sukarela</th>
+                                        <th style="color: #000;">SWP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <?php 
+                                    $totalWajib = 0;
+                                    $totalSukarela = 0;
+                                    $totalSwp = 0;
+                                    while ($r = mysqli_fetch_assoc($resultdetail)) { 
+                                        $totalWajib += $r['angsuran_wajib']; 
+                                        $totalSukarela += $r['angsuran_sukarela']; 
+                                        $totalSwp += $r['angsuran_swp']; 
+                                        ?>
+                                        <td style="color: #000;">
+                                            <?= date('d-m-Y', strtottime($r['tanggal_bayar'])) ? date('d-m-Y', strtottime($r['tanggal_bayar'])) : '-' ; ?>
+                                        </td>
+                                        <td style="color: #000;">
+                                            <?= $r['angsuran_wajib'] ? $r['angsuran_wajib'] : 0; ?></td>
+                                        <td style="color: #000;">
+                                            <?= $r['angsuran_sukarela'] ? $r['angsuran_sukarela'] : 0; ?></td>
+                                        <td style="color: #000;"><?= $r['angsuran_swp'] ? $r['angsuran_swp'] : 0; ?>
+                                        </td>
+                                    </tr>
+                                    <?php } ?>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th style="color: #000;">Pokok:
+                                            <?= (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) ;  ?>
+                                        </th>
+                                        <th style="color: #000;">Total Wajib: <?= $totalWajib; ?></th>
+                                        <th style="color: #000;">Total Sukarela: <?= $totalSukarela; ?></th>
+                                        <th style="color: #000;">Total SWP: <?= $totalSwp; ?></th>
+                                    </tr>
 
-                        </table>
-
-
-
+                                    <tr>
+                                        <td></td>
+                                        <th colspan="2" class="text-right" style="color: #000;">Total Simpanan</th>
+                                        <th style="color: #000;">
+                                            <?= $totalSimpanan = (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) + $totalWajib + $totalSukarela + $totalSwp ?>
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <!-- /.container-fluid -->
@@ -236,13 +306,13 @@ $resultdetail = mysqli_query($conn, $detail);
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
     <script>
     $(document).ready(function() {
 
-        $('#tableValue').DataTable({
-
-
-        });
+        $('#tableSimpanan').DataTable();
 
     });
     </script>
