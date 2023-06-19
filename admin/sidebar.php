@@ -34,7 +34,7 @@ $baseURL .= "://".$_SERVER['HTTP_HOST'] . '/koperasi/admin';
             <span style="color: #fff">Data Simpanan</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= $baseURL  ?>/tabel_anggota.php">
+        <a class="nav-link" href="<?= $baseURL  ?>/angsuran_simpanan.php">
             <i class="fas fa-list-ul" style="color: #fff"></i>
             <span style="color: #fff">Angsuran Simpanan</span></a>
     </li>
