@@ -20,7 +20,7 @@ include 'koneksi/db.php';
     .bg {
         width: 100%;
         height: 100vh;
-        background: #A2B5BB;
+        background: #00923F;
     }
 
     .wrapper {
@@ -91,13 +91,14 @@ include 'koneksi/db.php';
                                 <!-- Nested Row within Card Body -->
                                 <div class="row">
                                     <div class="col-lg-6 d-none d-lg-block">
-                                        <img src="img/gambarloginadmin2.gif" width="110%">
+                                        <img src="img/koperasi-logo.png" width="100%" style="padding: 10%">
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6" style="padding: 5%">
                                         <div class="p-5">
                                             <div class="text-center">
-                                                <h1 class="h4 text-gray-900 mb-4"> <b> Silahkan Login</b>
-                                                </h1>
+                                                <h1 class="h4 text-gray-900"> <b> Koperasi Masyarakat</b>
+                                                    <h1 class="h4 text-gray-900 mb-4"> <b> Silahkan Login</b>
+                                                    </h1>
                                                 </h1>
                                             </div>
                                             <form class="user" method="POST" action="admin/proseslogin.php">
@@ -118,7 +119,7 @@ include 'koneksi/db.php';
                                                 </div> -->
                                                 <!-- </div> -->
                                                 <button type="submit" class="btn btn-user btn-block"
-                                                    style="background-color: #A2B5BB;; color: #000">
+                                                    style="background-color: #FFF300;; color: #000; font-weight: bold">
                                                     Login
                                                 </button>
 

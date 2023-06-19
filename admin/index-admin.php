@@ -21,7 +21,7 @@ if(!isset($_SESSION['username'])){
     <meta name="author" content="">
     <link rel="icon" href="../img/score.png">
 
-    <title>SP - Internship</title>
+    <title>Koperasi</title>
 
 </head>
 
@@ -67,7 +67,11 @@ if(!isset($_SESSION['username'])){
                                             <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
                                                 Data Anggota</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-
+                                                <?php
+                                                    $anggota = mysqli_query($conn,"SELECT * FROM anggota");
+                                                    $jumlahAnggota = mysqli_num_rows($anggota);
+                                                ?>
+                                                <?php echo "$jumlahAnggota" ?>
                                             </div>
                                         </div>
                                         <div class="col-auto">
@@ -87,7 +91,7 @@ if(!isset($_SESSION['username'])){
                                             <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
                                                 Total Pinjaman</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-
+                                                <?= "Rp. " . number_format(0, 0, ',', '.') ?>
                                             </div>
                                         </div>
                                         <div class="col-auto">
@@ -109,7 +113,15 @@ if(!isset($_SESSION['username'])){
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
                                                     <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                        <?php
+                                                            $simpanan = mysqli_query($conn,"SELECT SUM(angsuran_wajib) + SUM(angsuran_sukarela) + SUM(angsuran_swp) AS totalSimpanan FROM angsuran_simpanan");
+                                                            $totalAngsuran = mysqli_fetch_assoc($simpanan);
+                                                            $pokok = mysqli_query($conn,"SELECT SUM(pokok_simpanan) AS totalPokok FROM simpanan");
+                                                            $totalPokok = mysqli_fetch_assoc($pokok);
+                                                            $totalSimpanan = $totalAngsuran['totalSimpanan'] + $totalPokok['totalPokok'];
 
+                                                        ?>
+                                                        <?= $totalSimpanan ? "Rp. " . number_format($totalSimpanan, 0, ',', '.') : 0  ?>
                                                     </div>
                                                 </div>
                                                 <div class="col">
