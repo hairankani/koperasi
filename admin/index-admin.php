@@ -91,7 +91,12 @@ if(!isset($_SESSION['username'])){
                                             <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
                                                 Total Pinjaman</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                                <?= "Rp. " . number_format(0, 0, ',', '.') ?>
+                                                <?php
+                                                    $pinjaman = mysqli_query($conn,"SELECT SUM(pokok_pinjaman) AS totalPinjaman FROM pinjaman");
+                                                    $totalPinjamanPokok = mysqli_fetch_assoc($pinjaman);
+                                                    $totalPinjaman = $totalPinjamanPokok['totalPinjaman'];
+                                                ?>
+                                                <?= $totalPinjaman ? "Rp. " . number_format($totalPinjaman, 0, ',', '.') : 0 ?>
                                             </div>
                                         </div>
                                         <div class="col-auto">

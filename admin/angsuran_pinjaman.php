@@ -67,7 +67,7 @@ if(!isset($_SESSION['username'])){
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 " style="text-align: center; color: #000">Angsuran Simpanan</h1>
+                        <h1 class="h3 mb-0 " style="text-align: center; color: #000">Angsuran Pinjaman</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -76,8 +76,8 @@ if(!isset($_SESSION['username'])){
                             <div class="card shadow h-100 py-2" style="background-color: #2A2024;">
                                 <div class="card-body" style="border-radius: 20px;">
                                     <form action="" method="POST" role="form text-left" enctype="multipart/form-data">
-                                        <input type="hidden" name="id_simpanan" class="form-control" required readonly
-                                            id="id_simpanan">
+                                        <input type="hidden" name="id_pinjaman" class="form-control" required readonly
+                                            id="id_pinjaman">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label style="color: #fff">Nama Anggota</label>
@@ -104,59 +104,67 @@ if(!isset($_SESSION['username'])){
                                                     <label for="tanggal" require class="col-form-label"
                                                         style="color: #fff">Tanggal Bayar
                                                     </label>
-                                                    <input type="date" name="tanggal_bayar" id="tanggal_bayar"
-                                                        class="form-control" required>
+                                                    <input type="date" name="tanggal_bayar" class="form-control" required
+                                                    value="<?php echo date("Y-m-d");?>">
                                                 </div>
                                             </div>
-                                            <!-- <div class="col-md-12">
-                                                <label for="pokok_simpanan" style="color: #fff">Simpanan Pokok</label>
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="basic-addon1">Rp. </span>
-                                                    </div>
-                                                    <input type="number" class="form-control" required
-                                                        placeholder="Input Simpanan Pokok" name="pokok_simpanan"
-                                                        aria-describedby="basic-addon1" id="pokok_simpanan">
-                                                </div>
-                                            </div> -->
+                                            
                                             <div class="col-md-12">
-                                                <label for="angsuran_wajib" style="color: #fff">Angsuran Wajib</label>
+                                                <label for="sisa_angsuran_pokok" style="color: #fff">Sisa Pokok Pinjaman</label>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1">Rp. </span>
                                                     </div>
                                                     <input type="number" class="form-control" required
-                                                        placeholder="Input Angsuran Wajib" name="angsuran_wajib"
-                                                        aria-describedby="basic-addon1" id="wajib_simpanan">
+                                                        placeholder="Sisa Pokok Pinjaman" name="sisa_pokok_pinjaman"
+                                                        aria-describedby="basic-addon1"
+                                                        value="<?= $result2['sisa_angs_pokok']; ?>">
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-12">
+                                                <label for="angsuran_pokok" style="color: #fff">Angsuran Pokok</label>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1">Rp. </span>
+                                                    </div>
+                                                    <input type="number" class="form-control" required
+                                                        placeholder="Angsuran Pokok" name="angsuran_pokok"
+                                                        aria-describedby="basic-addon1"
+                                                        value="<?= $result['angs_pokok']; ?>">
+                                                </div>
+                                            </div>
+
                                             <div class="col-md-12" style="color: #fff">
-                                                <label for="angsuran_sukarela">Angsuran Sukarela</label>
+                                                <label for="angsuran_bunga">Angsuran Bunga</label>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1">Rp. </span>
                                                     </div>
                                                     <input type="number" class="form-control"
-                                                        placeholder="Input Angsuran Sukarela" name="angsuran_sukarela"
-                                                        aria-describedby="basic-addon1">
+                                                        placeholder="Angsuran Bunga" name="angsuran_bunga"
+                                                        aria-describedby="basic-addon1"
+                                                        value="<?= $result['angs_bunga'] ?>">
                                                 </div>
                                             </div>
+
                                             <div class="col-md-12" style="color: #fff">
-                                                <label for="angsuran_swp">Angsuran Simpanan Wajib Pinjaman</label>
+                                                <label for="total_angsuran">Total Angsuran</label>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1">Rp. </span>
                                                     </div>
                                                     <input type="number" class="form-control"
-                                                        placeholder="Input Angsuran Simpanan Wajib Pinjaman"
-                                                        name="angsuran_swp" aria-describedby="basic-addon1">
+                                                        placeholder="Total Angsuran" name="total_angsuran"
+                                                        aria-describedby="basic-addon1"
+                                                        value="<?= $result['jml_angs'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="d-flex justify-content-end">
-                                                <a href="tabel_simpanan.php" class="btn btn-md mt-4 mb-4"
+                                                <a href="tabel_pinjaman.php" class="btn btn-md mt-4 mb-4"
                                                     style="background-color: #FFF500; color: #000; font-weight: bold; margin-right: 2%">Back</a>
-                                                <button type="submit" name="updateSimpanan" class="btn btn-md mt-4 mb-4"
+                                                <button type="submit" name="updatePinjaman" class="btn btn-md mt-4 mb-4"
                                                     style="background-color: #00913E; color: #fff; font-weight: bold; margin-right: 2%">Submit</button>
                                             </div>
                                         </div>
@@ -212,10 +220,10 @@ if(!isset($_SESSION['username'])){
 
 </html>
 <?php 
-if(isset($_POST['updateSimpanan']))
+if(isset($_POST['updatePinjaman']))
 {   
     
-    $id_simpanan = $_POST['id_simpanan'];
+    $id_pinjaman = $_POST['id_pinjaman'];
     $id_anggota = $_POST['id_anggota'];
     $tanggal_bayar = $_POST['tanggal_bayar'];
     $angsuran_wajib = $_POST['angsuran_wajib'];
@@ -226,8 +234,8 @@ if(isset($_POST['updateSimpanan']))
 
     try {
 
-        // Insert data ke tabel angsuran_simpanan
-        $query2 = "INSERT INTO angsuran_simpanan (`id_simpanan`, `id_anggota`, `tanggal_bayar`, `angsuran_wajib`, `angsuran_sukarela`, `angsuran_swp`) VALUES ('$id_simpanan', '$id_anggota', '$tanggal_bayar', '$angsuran_wajib', '$angsuran_sukarela', '$angsuran_swp')";
+        // Insert data ke tabel angsuran_pinjaman
+        $query2 = "INSERT INTO angsuran_pinjaman (`id_pinjaman`, `id_anggota`, `tanggal_bayar`, `angsuran_wajib`, `angsuran_sukarela`, `angsuran_swp`) VALUES ('$id_simpanan', '$id_anggota', '$tanggal_bayar', '$angsuran_wajib', '$angsuran_sukarela', '$angsuran_swp')";
         mysqli_query($conn, $query2);
 
         // // Commit transaksi jika tidak ada kesalahan
@@ -250,20 +258,19 @@ $(document).ready(function() {
 
         if (id_anggota) {
             $.ajax({
-                url: 'get_anggota_details.php',
+                url: 'get_anggota_details_pinjaman.php',
                 method: 'GET',
                 data: {
                     id_anggota: id_anggota
                 },
                 dataType: 'json',
-                success: function(simpanan) {
-                    $('#id_simpanan').val(simpanan.id_simpanan);
-                    $('#wajib_simpanan').val(simpanan.wajib_simpanan);
+                success: function(pinjaman) {
+                    $('#id_pinjaman').val(pinjaman.id_pinjaman);
                     detail.show();
                 },
                 error: function(xhr, status, error) {
                     alert(
-                        'Simpanan tidak ada, Silahkan tambahkan simpanan baru'
+                        'Pinjaman tidak ada, Silahkan tambahkan pinjaman baru'
                     )
                     detail.hide();
                 }

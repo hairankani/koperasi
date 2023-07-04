@@ -23,6 +23,17 @@ $id_anggota = $_GET['id_anggota'];
 // var_dump($detail);
 // $no=1;
 
+    $detail2 = "SELECT 'pencairan' as keterangan,tanggal_pinjaman AS tanggal,pokok_pinjaman AS pencairan,0 AS angsuran 
+    FROM pinjaman WHERE id_anggota= $id_anggota
+    UNION 
+    SELECT 'angsuran' as keterangan,tanggal_bayar AS tanggal,0 as pencairan,angsuran_pokok AS angsuran 
+    FROM angsuran_pinjaman WHERE id_anggota=". $id_anggota;
+    $resultdetail2 = mysqli_query($conn, $detail2);
+    
+// while($data=mysqli_fetch_array($resultdetail2)){
+//     echo 'Hasil '. date_format(date_create($data[1]),"d/m/Y") ;
+// }
+
 ?>
 
 <!doctype html>
@@ -184,61 +195,52 @@ $id_anggota = $_GET['id_anggota'];
                     </div>
 
                     <!-- table angsuran pinjaman -->
-                    <!-- //table simpanan -->
+                    <!-- //table pinjaman -->
                     <br>
-                    <div class="tampilkanSimpanan" style="background: #FFF402;padding: 15px;border-radius: 15px;">
-                        <h3 class="text-center" style="color: #000;">Histori Angsuran Pinjaman</h3>
+                    <div class="tampilkanPinjaman" style="background: #FFF402;padding: 15px;border-radius: 15px;">
+                        <h3 class="text-center" style="color: #000;">Histori Pinjaman</h3>
                         <div class="row">
-                            <table id="tableSimpanan" class="table table-hover" style="background: #fff" border="1">
+                            <table id="tablePinjaman" class="table table-hover" style="background: #fff" border="1">
                                 <thead>
                                     <tr>
                                         <th style="color: #000;">Tanggal</th>
-                                        <th style="color: #000;">Wajib</th>
-                                        <th style="color: #000;">Sukarela</th>
-                                        <th style="color: #000;">SWP</th>
+                                        <th style="color: #000;">Keterangan</th>
+                                        <th style="color: #000;">Pencairan</th>
+                                        <th style="color: #000;">Angsuran</th>
+                                        <th style="color: #000;">Saldo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <?php 
-                                    $totalWajib = 0;
-                                    $totalSukarela = 0;
-                                    $totalSwp = 0;
-                                    while ($r = mysqli_fetch_assoc($resultdetail)) { 
-                                        $totalWajib += $r['angsuran_wajib']; 
-                                        $totalSukarela += $r['angsuran_sukarela']; 
-                                        $totalSwp += $r['angsuran_swp']; 
+                                    $pencairan = 0;
+                                    $angsuran = 0;
+                                    $saldo = 0;
+                                    $no = 0;
+                                    while ($r = mysqli_fetch_assoc($resultdetail2)) { 
+                                        $pencairan = $r['pencairan']; 
+                                        $angsuran = $r['angsuran']; 
+                                        if($no = 0){
+                                            $saldo = $pencairan;
+                                            $no = $no+1;
+                                        } else {
+                                            $saldo = ($saldo + $pencairan) - $angsuran;
+                                        }
                                         ?>
                                         <td style="color: #000;">
-                                            <?= date('d-m-Y', strtottime($r['tanggal_bayar'])) ? date('d-m-Y', strtottime($r['tanggal_bayar'])) : '-' ; ?>
-                                        </td>
+                                            <?= date_format(date_create($r['tanggal']),"d/m/Y") ?></td>
                                         <td style="color: #000;">
-                                            <?= $r['angsuran_wajib'] ? $r['angsuran_wajib'] : 0; ?></td>
+                                            <?= $r['keterangan'] ?></td>
                                         <td style="color: #000;">
-                                            <?= $r['angsuran_sukarela'] ? $r['angsuran_sukarela'] : 0; ?></td>
-                                        <td style="color: #000;"><?= $r['angsuran_swp'] ? $r['angsuran_swp'] : 0; ?>
+                                            <?= $r['pencairan'] ? $r['pencairan'] : 0; ?></td>
+                                        <td style="color: #000;">
+                                            <?= $r['angsuran'] ? $r['angsuran'] : 0; ?></td>
+                                        <td style="color: #000;">
+                                            <?= $saldo; ?></td>
                                         </td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <th style="color: #000;">Pokok:
-                                            <?= (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) ;  ?>
-                                        </th>
-                                        <th style="color: #000;">Total Wajib: <?= $totalWajib; ?></th>
-                                        <th style="color: #000;">Total Sukarela: <?= $totalSukarela; ?></th>
-                                        <th style="color: #000;">Total SWP: <?= $totalSwp; ?></th>
-                                    </tr>
-
-                                    <tr>
-                                        <td></td>
-                                        <th colspan="2" class="text-right" style="color: #000;">Total Simpanan</th>
-                                        <th style="color: #000;">
-                                            <?= $totalSimpanan = (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) + $totalWajib + $totalSukarela + $totalSwp ?>
-                                        </th>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -313,6 +315,9 @@ $id_anggota = $_GET['id_anggota'];
     $(document).ready(function() {
 
         $('#tableSimpanan').DataTable();
+        $('#tablePinjaman').DataTable({
+            order: [[1, 'desc']]
+        });
 
     });
     </script>
