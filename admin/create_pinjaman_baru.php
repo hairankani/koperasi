@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])){
 
                     <!-- Page Heading -->
                     <div class="align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="text-align: center; color: #000">Pencairan Pinjaman</h1>
+                        <h1 class="h3 mb-0" style="text-align: center; color: #000">Pencairan Pinjaman</h1>
                     </div>
 
                     <!-- Content Row -->
