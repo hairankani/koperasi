@@ -45,7 +45,7 @@ setlocale(LC_TIME, 'id_ID.utf8')
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <h1 class="mt-5 text-center">Data Pinjaman</h1>
+                    <h1 class="mt-5 text-center" style="color: #000">Data Pinjaman</h1>
                     </br>
 
                     <!-- //add intern -->
@@ -57,7 +57,7 @@ setlocale(LC_TIME, 'id_ID.utf8')
 
                     <!-- //table -->
                     <div class="row">
-                        <table id="tablePinjaman" class="table table-hover" style="background: #fff">
+                        <table id="tablePinjaman" class="table table-hover" style="background: #fff; color: #000">
                             <thead>
                                 <tr>
                                     <th scope="col">No.</th>
@@ -83,18 +83,18 @@ setlocale(LC_TIME, 'id_ID.utf8')
                             while ($r = mysqli_fetch_assoc($sql)) {
                                 
                             ?>
-                            <tr class="text-dark">
-                                <td class="text-center text-dark"><?= $no ?></td>
-                                <td class="text-dark">
+                            <tr class="" style="color: #000">
+                                <td class="text-center" style="color: #000"><?= $no ?></td>
+                                <td class="" style="color: #000">
                                     <a href="detail_anggota.php?id_anggota=<?= $r['id_anggota']; ?>"
                                         data-toggle="tooltip" title="Detail">
                                         <?= $r['nama_anggota']; ?>
                                     </a>
                                 </td>
-                                <td class="text-dark"><?= date('d/m/Y', strtotime($r['tanggal_pinjaman'])); ?></td>
-                                <td class="text-dark"><?= $r['tenor']; ?></td>
-                                <td class="text-dark"><?= date('d/m/Y', strtotime($r['tanggal_pelunasan'])); ?></td>
-                                <td class="text-dark">
+                                <td class="" style="color: #000"><?= date('d/m/Y', strtotime($r['tanggal_pinjaman'])); ?></td>
+                                <td class="" style="color: #000"><?= $r['tenor']; ?></td>
+                                <td class="" style="color: #000"><?= date('d/m/Y', strtotime($r['tanggal_pelunasan'])); ?></td>
+                                <td class="" style="color: #000">
                                 <?php
                                     $status = $r['status']; // Ambil nilai status dari database
                                     if ($status == 1) {
@@ -106,15 +106,14 @@ setlocale(LC_TIME, 'id_ID.utf8')
                                     }
                                 ?>    
                                 </td>
-                                <td class="text-dark"><?= $r['pokok_pinjaman']; ?></td>
-                                <td class="text-dark"><?= $r['pokok_pinjaman']; ?></td>
-                                <td class="text-dark"><?= $r['suku_bunga']; ?> %</td>
-                                <td class="text-dark"><?= $r['nilai_bunga']; ?></td>
-                                <td class="text-dark"><?= $r['jasa_pinjaman']; ?></td>
-                                <td class="text-dark"><?= $r['propisi']; ?> %</td>
-                                <td class="text-dark"><?= $r['biaya_propisi']; ?></td>
-                                <td class="text-dark"><?= $r['total_pencairan']; ?></td>
-                                <td class="text-dark">
+                                <td class="" style="color: #000"><?= $r['pokok_pinjaman']; ?></td>
+                                <td class="" style="color: #000"><?= $r['suku_bunga']; ?> %</td>
+                                <td class="" style="color: #000"><?= $r['nilai_bunga']; ?></td>
+                                <td class="" style="color: #000"><?= $r['jasa_pinjaman']; ?></td>
+                                <td class="" style="color: #000"><?= $r['propisi']; ?> %</td>
+                                <td class="" style="color: #000"><?= $r['biaya_propisi']; ?></td>
+                                <td class="" style="color: #000"><?= $r['total_pencairan']; ?></td>
+                                <td class="">
                                     <a href="update_pinjaman_angsuran.php?id_pinjaman=<?= $r['id_pinjaman']; ?>"
                                         type="submit" name="view" class="btn text-light"
                                         style="background-color: #FFF300;color: #000000" data-toggle="tooltip"
@@ -129,34 +128,34 @@ setlocale(LC_TIME, 'id_ID.utf8')
                                     </a>
                                 </td>
 
-                        <!-- MODAL HAPUS -->
-                        <div class="modal fade" id="modalHapus<?php echo $r['id_pinjaman']; ?>">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Hapus Pinjaman<h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                            <div class="modal-body">
-                                                <form method="post">
-                                                    <input type="hidden" name="id_pinjaman" value="<?= $r['id_pinjaman']; ?>">
-                                                    Apakah kamu yakin menghapus pinjaman ini?
+                            <!-- MODAL HAPUS -->
+                            <div class="modal fade" id="modalHapus<?php echo $r['id_pinjaman']; ?>">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Pinjaman<h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn"
-                                                    style="background-color: #2A2024; font-weight: bold; color: #fff"
-                                                    data-bs-dismiss="modal">Tidak</button>
-                                                <button type="submit" class="btn"
-                                                    style="background-color: #8B0000; font-weight: bold; color: #fff"
-                                                    name="hapus">Ya</button>
-                                                </form>
+                                                <div class="modal-body">
+                                                    <form method="post">
+                                                        <input type="hidden" name="id_pinjaman" value="<?= $r['id_pinjaman']; ?>">
+                                                        Apakah kamu yakin menghapus pinjaman ini?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn"
+                                                        style="background-color: #2A2024; font-weight: bold; color: #fff"
+                                                        data-bs-dismiss="modal">Tidak</button>
+                                                    <button type="submit" class="btn"
+                                                        style="background-color: #8B0000; font-weight: bold; color: #fff"
+                                                        name="hapus">Ya</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </tr>
 
                     <?php $no++;
@@ -224,7 +223,9 @@ setlocale(LC_TIME, 'id_ID.utf8')
     <script>
     $(document).ready(function() {
 
-        $('#tablePinjaman').DataTable();
+        $('#tablePinjaman').dataTable({
+            "responsive": true,
+        });
 
     });
     </script>
