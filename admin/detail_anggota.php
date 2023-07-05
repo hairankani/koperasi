@@ -21,7 +21,7 @@ $id_anggota = $_GET['id_anggota'];
     $resultdetail = mysqli_query($conn, $detail);
 
 // var_dump($detail);
-// $no=1;
+
 
 ?>
 
@@ -100,7 +100,8 @@ $id_anggota = $_GET['id_anggota'];
                                 <tr>
                                     <td style="color: #000;">Tanggal Bergabung</td>
                                     <td style="color: #000;">:</td>
-                                    <td style="color: #000;"><?= $result['tanggal_bergabung']; ?></td>
+                                    <td style="color: #000;">
+                                        <?= date('d-m-Y', strtotime($result['tanggal_bergabung'])); ?></td>
                                 </tr>
                                 <tr>
                                     <td style="color: #000;">Alamat</td>
@@ -120,7 +121,8 @@ $id_anggota = $_GET['id_anggota'];
                                 <tr>
                                     <td style="color: #000;">Tanggal Lahir</td>
                                     <td style="color: #000;">:</td>
-                                    <td style="color: #000;"><?= $result['tanggal_lahir']; ?></td>
+                                    <td style="color: #000;"><?= date('d-m-Y', strtotime($result['tanggal_lahir'])); ?>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -149,14 +151,18 @@ $id_anggota = $_GET['id_anggota'];
                                         $totalSukarela += $r['angsuran_sukarela']; 
                                         $totalSwp += $r['angsuran_swp']; 
                                         ?>
+
                                         <td style="color: #000;">
                                             <?= $r['tanggal_bayar'] ? date('d-m-Y', strtotime($r['tanggal_bayar'])) : '-' ; ?>
                                         </td>
                                         <td style="color: #000;">
-                                            <?= $r['angsuran_wajib'] ? $r['angsuran_wajib'] : 0; ?></td>
+                                            <?= $r['angsuran_wajib'] ? "Rp. " . number_format($r['angsuran_wajib'], 0, ',', '.') :"Rp. " . 0; ?>
+                                        </td>
                                         <td style="color: #000;">
-                                            <?= $r['angsuran_sukarela'] ? $r['angsuran_sukarela'] : 0; ?></td>
-                                        <td style="color: #000;"><?= $r['angsuran_swp'] ? $r['angsuran_swp'] : 0; ?>
+                                            <?= $r['angsuran_sukarela'] ? "Rp. " . number_format($r['angsuran_sukarela'], 0, ',', '.') : "Rp. " . 0; ?>
+                                        </td>
+                                        <td style="color: #000;">
+                                            <?= $r['angsuran_swp'] ? "Rp. " . number_format($r['angsuran_swp'], 0, ',', '.') : "Rp. " . 0; ?>
                                         </td>
                                     </tr>
                                     <?php } ?>
@@ -164,18 +170,25 @@ $id_anggota = $_GET['id_anggota'];
                                 <tfoot>
                                     <tr>
                                         <th style="color: #000;">Pokok:
-                                            <?= (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) ;  ?>
+                                            <?= (isset($result['pokok_simpanan']) ? "Rp. " . number_format($result['pokok_simpanan'], 0, ',', '.') : "Rp. " . 0) ;  ?>
                                         </th>
-                                        <th style="color: #000;">Total Wajib: <?= $totalWajib; ?></th>
-                                        <th style="color: #000;">Total Sukarela: <?= $totalSukarela; ?></th>
-                                        <th style="color: #000;">Total SWP: <?= $totalSwp; ?></th>
+                                        <th style="color: #000;">Total Wajib:
+                                            <?= "Rp. " . number_format($totalWajib, 0, ',', '.'); ?>
+                                        </th>
+                                        <th style="color: #000;">Total Sukarela:
+                                            <?= "Rp. " . number_format($totalSukarela, 0, ',', '.'); ?>
+                                        </th>
+                                        <th style="color: #000;">Total SWP:
+                                            <?= "Rp. " . number_format($totalSwp, 0, ',', '.'); ?>
+                                        </th>
                                     </tr>
 
                                     <tr>
                                         <td></td>
                                         <th colspan="2" class="text-right" style="color: #000;">Total Simpanan</th>
                                         <th style="color: #000;">
-                                            <?= $totalSimpanan = (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) + $totalWajib + $totalSukarela + $totalSwp ?>
+                                            <?php $totalSimpanan = (isset($result['pokok_simpanan']) ? $result['pokok_simpanan'] : 0) + $totalWajib + $totalSukarela + $totalSwp ?>
+                                            <?= "Rp. " . number_format($totalSimpanan, 0, ',', '.') ?>
                                         </th>
                                     </tr>
                                 </tfoot>

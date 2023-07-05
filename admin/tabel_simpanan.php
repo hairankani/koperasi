@@ -92,9 +92,12 @@ setlocale(LC_TIME, 'id_ID.utf8')
                                 </td>
                                 <td class="" style="color: #000"><?= date('d/m/Y', strtotime($r['tanggal_mulai'])); ?>
                                 </td>
-                                <td class="" style="color: #000"><?= $r['pokok_simpanan']; ?></td>
-                                <td class="" style="color: #000"><?= $r['wajib_simpanan']; ?></td>
-                                <td class="" style="color: #000"><?= $total ?></td>
+                                <td class="" style="color: #000">
+                                    <?= "Rp. " . number_format($r['pokok_simpanan'], 0, ',', '.'); ?></td>
+                                <td class="" style="color: #000">
+                                    <?= "Rp. " . number_format($r['wajib_simpanan'], 0, ',', '.'); ?></td>
+                                <td class="" style="color: #000"><?= "Rp. " . number_format($total, 0, ',', '.');?>
+                                </td>
                                 <td class="">
                                     <a href="update_simpanan_angsuran.php?id_simpanan=<?= $r['id_simpanan']; ?>"
                                         type="submit" name="view" class="btn text-light"
